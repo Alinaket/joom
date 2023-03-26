@@ -26,6 +26,7 @@
             <li><a href="#">Підтримка</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Гарантія</a></li>
+            <li class="coupon"><bottom>У вас є купон!</bottom></li>
         </ul>
     </div>
 </div>
