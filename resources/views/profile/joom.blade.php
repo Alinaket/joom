@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset("css/reset.css")}}">
+    <link rel="stylesheet" href="{{asset("css/joom_heder.css")}}">
     <title>Document</title>
 </head>
 <body>
@@ -13,12 +14,10 @@
     <div class="country">
         <div class="language">
             <img src="https://cdn.webshopapp.com/shops/94414/files/52440074/flag-of-ukraine.jpg" alt="">
-            <em>Україна</em>
-            <span><i class="fa-solid fa-caret-down"></i></span>
+            <em>Українська<span><i class="fa-solid fa-caret-down"></i></span></em>
         </div>
         <div class="currency">
-            <em>UAH</em>
-            <span><i class="fa-solid fa-caret-down"></i></span>
+            <em>UAH<span><i class="fa-solid fa-caret-down"></i></span></em>
         </div>
     </div>
     <div class="help">
@@ -26,7 +25,7 @@
             <li><a href="#">Підтримка</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Гарантія</a></li>
-            <li class="coupon"><bottom>У вас є купон!</bottom></li>
+            <li class="coupon">У вас є купон!</li>
         </ul>
     </div>
 </div>
@@ -455,5 +454,6 @@
         </div>
     </div>
 </div>
+<script src="https://kit.fontawesome.com/1e05c9e939.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+body{
+    max-width: 1285px;
+    margin: auto;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Segoe UI";
+    font-size: 12px;
+    /*padding: 8px 10px;*/
+    align-items: center;
+
+}
+.nav_container img{
+    width: 12px;
+    height: 9px;
+    border-radius: 3px;
+    border: 1px hsla(0,0%,80%,.48);
+    padding-right: 5px;
+}
+.nav_container .country{
+    color: rgb(45, 47, 67);
+    display: flex;
+}
+.nav_container .language{
+    margin-right: 32px;
+}
+.nav_container .country span{
+    color: rgb(142, 144, 167);
+    padding-left: 5px;
+}
+.nav_container .help .coupon{
+    background-image: linear-gradient(90deg, rgb(240, 98, 146), rgb(142, 98, 220));
+    color: white;
+    padding: 9px 24px;
+    border-radius: 0 0 12px 12px ;
+    font-size: 14px;
+
+}
+.nav_container .help li, .help li a{
+    text-decoration: 0;
+    color: rgb(142, 144, 167);
+    margin: auto 0;
+}
+.nav_container .help ul{
+    display: flex;
+    justify-content: space-around;
+    grid-gap: 0 32px;
+}
