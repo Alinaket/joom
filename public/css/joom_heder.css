@@ -13,6 +13,7 @@ img{
     font-size: 12px;
     /*padding: 8px 10px;*/
     align-items: center;
+    padding-bottom: 24px;
 
 }
 .nav_container img{
@@ -50,4 +51,74 @@ img{
     display: flex;
     justify-content: space-around;
     grid-gap: 0 32px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    /*margin: auto 0;*/
+    align-items: center;
+    font-family: "Segoe UI";
+}
+.header .logo img{
+    width: 125px;
+    /*padding-right: 30px;*/
+    height: auto;
+}
+.header .box_input{
+    background: #f5f6f9;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+.header .input input{
+    background: #f5f6f9;
+    width: 595px;
+    height: 48px;
+    border: none;
+    color: #8e90a7;
+    padding: 0 16px;
+    border-radius: 10px;
+
+}
+.header .box_input button{
+    display: block;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #ff6262;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+
+}
+.header .users ul{
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    display: flex;
+    justify-content: space-around;
+    grid-gap: 35px;
+}
+.header .users a{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color: #3d3f56;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+.header .users a span{
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+.header .users .message{
+    position: absolute;
+    top: 50px;
+    right: 630px;
+    background: #ff6262;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 500;
 }

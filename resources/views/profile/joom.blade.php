@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset("css/reset.css")}}">
+    <link rel="stylesheet" href="{{asset("css/recet.css")}}">
     <link rel="stylesheet" href="{{asset("css/joom_heder.css")}}">
     <title>Document</title>
 </head>
@@ -33,13 +33,15 @@
     <div class="logo">
         <a href="#"><img src="https://logovectordl.com/wp-content/uploads/2019/11/joom-logo-vector.png" alt=""></a>
     </div>
-    <div class="input">
-        <form action="">
-            <label for="">
-                <input type="text" placeholder="Пошук">
-            </label>
-        </form>
-        <div class="button">
+    <div class="box_input">
+        <div class="input">
+            <form action="">
+                <label for="">
+                    <input type="text" placeholder="Пошук">
+                </label>
+            </form>
+        </div>
+        <div class="button_input">
             <button>Знайти</button>
         </div>
     </div>
