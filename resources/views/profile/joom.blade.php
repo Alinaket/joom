@@ -57,9 +57,9 @@
 </div>
 <div class="categories">
     <ul>
-        <li><span><i class="fa-solid fa-bars"></i></span> Всі категорії</li>
-        <li><span><i class="fa-regular fa-circle"></i></span>Крутити колесо!</li>
-        <li><span><i class="fa-regular fa-window-restore"></i></span>Огляди від користувачів</li>
+        <li class="category"><span><i class="fa-solid fa-bars"></i></span> Всі категорії</li>
+{{--        <li class=""><span><i class="fa-regular fa-circle"></i></span>Крутити колесо!</li>--}}
+        <li class="reviews_users"><span><i class="fa-regular fa-window-restore"></i></span>Огляди від користувачів</li>
         <li>Жіноча мода</li>
         <li>Електроніка</li>
         <li>Товари для дому</li>

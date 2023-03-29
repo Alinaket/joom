@@ -1,6 +1,7 @@
 body{
     max-width: 1285px;
     margin: auto;
+    font-family: "Segoe UI";
 }
 img{
     width: 300px;
@@ -9,7 +10,6 @@ img{
 .nav_container{
     display: flex;
     justify-content: space-between;
-    font-family: "Segoe UI";
     font-size: 12px;
     /*padding: 8px 10px;*/
     align-items: center;
@@ -40,12 +40,13 @@ img{
     padding: 9px 24px;
     border-radius: 0 0 12px 12px ;
     font-size: 14px;
-
+    display: none;
 }
 .nav_container .help li, .help li a{
     text-decoration: 0;
     color: rgb(142, 144, 167);
     margin: auto 0;
+    padding: 9px 0;
 }
 .nav_container .help ul{
     display: flex;
@@ -55,9 +56,9 @@ img{
 .header{
     display: flex;
     justify-content: space-between;
-    /*margin: auto 0;*/
+    margin: auto 0;
+    text-align: center;
     align-items: center;
-    font-family: "Segoe UI";
 }
 .header .logo img{
     width: 125px;
@@ -69,6 +70,7 @@ img{
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+    border-radius: 10px;
 }
 .header .input input{
     background: #f5f6f9;
@@ -78,7 +80,6 @@ img{
     color: #8e90a7;
     padding: 0 16px;
     border-radius: 10px;
-
 }
 .header .box_input button{
     display: block;
@@ -121,4 +122,29 @@ img{
     border-radius: 10px;
     font-size: 10px;
     font-weight: 500;
+}
+.categories ul{
+    /*display: grid;*/
+    /*grid-template-columns: auto auto auto auto auto auto auto auto auto;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-size: 14px;
+    padding: 21px 0 32px;
+    width: 1284px;
+}
+.categories li{
+    color: #3d3f56;
+    white-space: nowrap;
+    margin: 8px 0;
+    margin-right: 32px;
+    display: block;
+    width: auto;
+}
+.categories .category{
+    font-weight: 500;
+}
+.categories .reviews_users{
+    font-size: 18px;
+    text-decoration: underline;
+    color: #ff6262;
 }
