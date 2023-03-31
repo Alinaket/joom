@@ -61,9 +61,9 @@ img{
     align-items: center;
 }
 .header .logo img{
-    width: 125px;
+    width: 122px;
     /*padding-right: 30px;*/
-    height: auto;
+    height: 70px;
 }
 .header .box_input{
     background: #f5f6f9;
@@ -71,6 +71,7 @@ img{
     grid-template-columns: auto auto;
     align-items: center;
     border-radius: 10px;
+    height: 48px;
 }
 .header .input input{
     background: #f5f6f9;
@@ -124,18 +125,18 @@ img{
     font-weight: 500;
 }
 .categories ul{
-    /*display: grid;*/
-    /*grid-template-columns: auto auto auto auto auto auto auto auto auto;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 14px;
-    padding: 21px 0 32px;
+    padding: 10px 0 32px;
     width: 1284px;
+    /*text-align: center;*/
+    align-items: center;
 }
 .categories li{
     color: #3d3f56;
     white-space: nowrap;
-    margin: 8px 0;
+    margin: 8px 0 10px;
     margin-right: 32px;
     display: block;
     width: auto;
@@ -143,8 +144,232 @@ img{
 .categories .category{
     font-weight: 500;
 }
+.categories .category span{
+    margin-right: 5px;
+}
 .categories .reviews_users{
-    font-size: 18px;
-    text-decoration: underline;
     color: #ff6262;
+    font-weight: 500;
+}
+.categories .reviews_users span{
+    margin-right: 5px;
+    font-size: 14px;
+}
+.content .banner{
+    height: 352px;
+    margin: 16px 0 0 0;
+    padding-bottom: 40px;
+}
+.content .banner .card{
+    height: 352px;
+    background: #2d2f43;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-radius: 13px;
+}
+.content .banner .card .text{
+    padding: 32px 56px 32px 112px;
+    margin: auto 0;
+}
+.content .banner .card h3{
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.content .banner .card p{
+    font-size: 24px;
+    margin: 16px 0 -2px;
+}
+.content .banner .card .img{
+    padding: 32px 176px;
+}
+.content .banner .card img{
+    width: 288px;
+    height: 288px;
+    position: relative;
+}
+.content .banner .arrow, .arrow{
+    font-size: 40px;
+    color: white;
+    /*background: #2d2f43;*/
+}
+.content .banner .arrow_left{
+    position: absolute;
+    top:400px;
+    left: 318px;
+}
+.content .banner .arrow_right{
+    position: absolute;
+    top:400px;
+    right: 318px;
+}
+.content .interest{
+    margin-top: 16px;
+    padding-bottom: 40px;
+}
+.content .interest .title{
+    display: flex;
+    justify-content: space-between;
+}
+.content .interest .title h2{
+    font-size: 24px;
+    font-weight: 500;
+    color: #2d2f43;
+    margin-bottom:16px;
+}
+.content .interest .title p{
+    color: #2d2f43;
+    font-size: 14px;
+}
+.content .interest .title span{
+    color: #b2b3c2;
+}
+.content .interest .cardList, .product .cardList{
+    display: flex;
+    justify-content: space-around;
+    grid-gap: 20px;
+}
+.content .interest .card img, .product .card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+}
+.content .interest .card .sale_time, .product .card .sale_time{
+    background: #ff6262;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 8px;
+    position: absolute;
+    top: 855px;
+    right: 400px;
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    grid-gap: 5px;
+}
+.content .interest .card .sale, .product .card .sale{
+    background: #ff6262;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 6px;
+    margin-top: 9px;
+    display: inline-block;
+}
+.content .interest .card .price, .product .card .price{
+    display: flex;
+    align-items: flex-end;
+    grid-gap: 7px;
+}
+.content .interest .card .price p, .product .card .price p{
+    color: #2d2f43;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 10px;
+    grid-gap: 5px;
+}
+.content .interest .card .price em, .product .card .price em{
+    color: #8e90a7;
+    font-size: 13px;
+    text-decoration: line-through;
+    grid-gap: 5px;
+}
+.content .interest .card .marks, .product .card .marks{
+    color: #ff6262;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.content .interest .card .discript, .product .card .discript{
+    color: #2d2f43;
+    font-size: 12px;
+    margin-top: 8px;
+}
+.action_week .title{
+    font-size: 24px;
+    font-weight: 500;
+    color: #2d2f43;
+    margin: 0 0 16px 5px;
+}
+.action_week .cardList, .container_banners .cardList{
+    display: flex;
+    justify-content: space-around;
+    grid-gap: 15px;
+}
+.action_week .card, .container_banners .card{
+    border-radius: 10px;
+}
+.action_week .yellow{
+    background: #f4ec87;
+    color: #2d2f43;
+}
+.action_week .card img{
+    height: 162px;
+    width: 417px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+.action_week .card .text{
+    /*background: #f4ec87;*/
+    padding: 22px 10px 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+.action_week .card h3, .container_banners .card h3{
+    font-size: 20px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+.action_week .card p, .container_banners .card p{
+    font-size: 14px;
+    margin-top: 6px;
+}
+.action_week .pink{
+    background: #fbcee3;
+    color: white;
+}
+.action_week .arrow_left_action{
+    top: 600px;
+    left: 318px;
+    position: absolute;
+    background: #2d2f43;
+}
+.action_week .arrow_left_action span{
+    right: 318px;
+    top: 600px;
+    position: absolute;
+}
+.action_week .arrow_left_action{
+    background: #2d2f43;
+}
+.info_sale .box{
+    display: flex;
+    justify-content: space-around;
+}
+.info_sale .product .cardList{
+    display: flex;
+    justify-content: space-around;
+    width: 866px;
+}
+.container_banners .card{
+    width: 417px;
+    text-align: center;
+}
+.container_banners .card img{
+    width: 132px;
+    height: 132px;
+    padding-bottom: 24px;
+}
+.container_banners .card .text{
+    padding: 22px 10px 10px;
+}
+.container_banners .red{
+    background: #ff8cbf;
+    color: white;
+}
+.container_banners .white{
+    color: #2d2f43;
+    background: #eaedf8;
 }
