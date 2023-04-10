@@ -59,5 +59,7 @@ class ProfileController extends Controller
     }
     public function joom (){
         return view("profile.joom");
+
     }
 }
+
