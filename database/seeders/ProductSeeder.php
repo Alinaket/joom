@@ -39,7 +39,7 @@ class ProductSeeder extends Seeder
 //            ['img'=>"", 'sale'=>"",'price'=>"", 'price_sale'=>"", 'star'=>"",'name'=>"",],
 //
 //
-//            ['img'=>"", 'sale'=>"",'price'=>"", 'price_sale'=>"", 'star'=>"",'name'=>"",],
+//            ['img'=>"", 'sale'=>"",'price'=>"", 'price_sale'=>"", 'star'=>"",'name'=>"",]
 
         ]);
     }
