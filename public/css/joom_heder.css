@@ -210,7 +210,8 @@ img{
     display: flex;
     justify-content: space-between;
     text-align: center;
-    padding-top: 40px;
+    /*padding-top: 40px;*/
+    margin: auto 0;
 }
 h2{
     font-size: 24px;
@@ -348,11 +349,16 @@ h2{
 .info_sale .box{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 40px 0;
+}
+.info_sale .product{
+    padding-left: 20px;
 }
 .info_sale .product .cardList{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 866px;
+
 }
 .container_banners .card{
     width: 417px;
@@ -421,7 +427,7 @@ h2{
 .info .footer li, a{
     color: #8e90a7;
     font-size: 14px;
-    margin: 16px 0;
+    /*margin: 16px 0;*/
 }
 .info .footer .black{
     color: #2d2f43;
@@ -451,7 +457,16 @@ h2{
     background: #fcd1ef;
     color: #2d2f43;
     text-align: center;
-
+    border-radius: 10px;
+}
+.info_sale .img_left .img{
+    padding-top: 50px;
+}
+.box_img_left{
+    margin-top: 120px;
+}
+.box_img_left .text{
+    padding-top: 130px;
 }
 .info_sale .img_left h3{
     font-size: 40px;

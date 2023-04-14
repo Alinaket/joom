@@ -354,10 +354,12 @@
     <div class="info_sale">
         <div class="box">
             <div class="img_left">
-                <img src="https://upload.joomcdn.net/c72f256c071e2d473d6f5492a3d771414f7ed0fc_original.png" alt="">
-                <div class="text">
-                    <h3>Няв-товари</h3>
-                    <p>Муркотиливі знижки</p>
+                <div class="box_img_left">
+                    <img src="https://upload.joomcdn.net/c72f256c071e2d473d6f5492a3d771414f7ed0fc_original.png" alt="">
+                    <div class="text">
+                        <h3>Няв-товари</h3>
+                        <p>Муркотиливі знижки</p>
+                    </div>
                 </div>
             </div>
             <div class="product">
