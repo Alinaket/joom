@@ -115,7 +115,7 @@ img{
 }
 .header .users .message{
     position: absolute;
-    top: 50px;
+    top: 60px;
     right: 630px;
     background: #ff6262;
     color: white;
@@ -156,11 +156,11 @@ img{
     font-size: 14px;
 }
 .content .banner{
-    height: 352px;
+    height: 320px;
     margin: 16px 0 0 0;
 }
 .content .banner .card{
-    height: 352px;
+    height: 300px;
     background: #2d2f43;
     display: flex;
     justify-content: space-between;
@@ -184,8 +184,8 @@ img{
     padding: 32px 176px;
 }
 .content .banner .card img{
-    width: 288px;
-    height: 288px;
+    width: 248px;
+    height: 248px;
     position: relative;
 }
 .content .banner .arrow, .arrow{
@@ -230,7 +230,7 @@ h2{
 .cardList_all{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 45px 15px ;
 }
 .cardList_all .card img{
     width: 200px;
@@ -293,7 +293,7 @@ h2{
     font-size: 24px;
     font-weight: 500;
     color: #2d2f43;
-    margin: 0 0 16px 5px;
+    margin:16px 0 0 5px;
 }
 .cardList_banner{
     display: flex;
@@ -349,16 +349,21 @@ h2{
 .info_sale .box{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 40px 0;
+    padding: 56px 0;
 }
 .info_sale .product{
     padding-left: 20px;
+}
+.health{
+    padding: 16px 0 40px;
+}
+.health .title{
+    margin:16px 0 0 5px ;
 }
 .info_sale .product .cardList{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 866px;
-
 }
 .container_banners .card{
     width: 417px;
@@ -394,7 +399,9 @@ h2{
     font-size: 24px;
     font-weight: 500;
     color: #2d2f43;
-    margin: 0 0 16px 5px;
+}
+.for_you{
+    padding: 40px 0 16px;
 }
 .for_you .button_see{
     margin-top: 44px;
@@ -427,7 +434,8 @@ h2{
 .info .footer li, a{
     color: #8e90a7;
     font-size: 14px;
-    /*margin: 16px 0;*/
+    margin: 16px 0;
+
 }
 .info .footer .black{
     color: #2d2f43;
@@ -436,7 +444,7 @@ h2{
 }
 .info .footer .none{
     grid-gap: 4px 0;
-    margin: 0;
+    margin: 8px 0;
 }
 .bottom_bar{
     display: flex;
@@ -446,7 +454,10 @@ h2{
     padding-bottom: 54px;
 }
 .bottom_bar .link, a{
-    font-size: 12px;
+    font-size: 14px;
+}
+.bottom_bar .title p{
+    color: #1a202c;
 }
 .info_sale .img_left img{
     width: 320px;
