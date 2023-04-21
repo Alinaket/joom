@@ -66,16 +66,15 @@
         <li>Краса</li>
         <li>Здоров'я</li>
         <li>Чоловіча мода</li>
-        <li>Автомобілі та мотоцикли</li>
         <li>Спорт та відпочинок</li>
-        <li>Будівництво та ремонт</li>
+        <li>Автомобілі та мотоцикли</li>
         <li>Взуття</li>
         <li>Прикраси та біжутерія</li>
-        <li>Годинники</li>
+        <li>Будівництво та ремонт</li>
         <li>Дитячі товари</li>
+        <li>Годинники</li>
+        <li>Товари для дорослих</li>
         <li>Сумки та валізи</li>
-        <li>Хобі та творчість</li>
-        <li>Xiaomi</li>
     </ul>
 </div>
 <div class="content">
@@ -140,205 +139,38 @@
             <a href="#"><p>Усі товари <span><i class="fa-solid fa-chevron-right"></i></span></p></a>
         </div>
         <div class="cardList cardList_all">
-            <div class="card">
-{{--                @foreach($products as $item)--}}
-{{--                    <div class="img">--}}
-{{--                        <img src="{{$img}}" alt="">--}}
-{{--                        <div class="sale_time">--}}
-{{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="text">--}}
-{{--                        <div class="sale">--}}
-{{--                            <p>-<span>{{$sale}}</span>%</p>--}}
-{{--                        </div>--}}
-{{--                        <div class="price">--}}
-{{--                            <p><span>{{$price}}</span>грн</p>--}}
-{{--                            <em><span>{{$sale_price}}</span>грн</em>--}}
-{{--                        </div>--}}
-{{--                        <em>Хід продажів</em>--}}
-{{--                        <div class="marks">--}}
-{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
-{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
-{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
-{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
-{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
-{{--                        </div>--}}
-{{--                        <div class="discript">--}}
-{{--                            <p><span>{{$name}}</span>...</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @endforeach--}}
-{{--            </div>--}}
 
-                            <div class="img">
-                                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                                <div class="sale_time">
-                                    <p>Sale 🔥 <span>24:44:17</span></p>
-                                </div>
-                            </div>
-                            <div class="text">
-                                <div class="sale">
-                                    <p>-50%</p>
-                                </div>
-                                <div class="price">
-                                    <p><span>1077</span>грн</p>
-                                    <em><span>2077</span>грн</em>
-                                </div>
-                                                    <em>Хід продажів</em>
-                                <div class="marks">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                </div>
-                                <div class="discript">
-                                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                                </div>
-                            </div>
+                @foreach($products as $item)
+                <div class="card">
+                    <div class="img">
+                        <img src="{{$item->img}}" alt="">
+                        <div class="sale_time">
+                            <p>Sale 🔥 <span>24:44:17</span></p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="sale">
+                            <p>-<span>{{$item->sale}}</span>%</p>
+                        </div>
+                        <div class="price">
+                            <p><span>{{$item->price}}</span>грн</p>
+                            <em><span>{{$item->sale_price}}</span>грн</em>
+                        </div>
+                        <em>Хід продажів</em>
+                        <div class="marks">
+                            <span><i class="fa-solid fa-star"></i></span>
+                            <span><i class="fa-solid fa-star"></i></span>
+                            <span><i class="fa-solid fa-star"></i></span>
+                            <span><i class="fa-solid fa-star"></i></span>
+                            <span><i class="fa-solid fa-star"></i></span>
+                        </div>
+                        <div class="discript">
+                            <p>{{$item->name}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
         </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 <div class="action_week">
@@ -398,238 +230,36 @@
                 <a href="#"><p>Усі товари <span><i class="fa-solid fa-chevron-right"></i></span></p></a>
             </div>
             <div class="cardList cardList_all">
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
+                @foreach($interesting as $item)
+                    <div class="card">
+                        <div class="img">
+                            <img src="{{$item->img}}" alt="">
+                            <div class="sale_time">
+                                <p>Sale 🔥 <span>24:44:17</span></p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <div class="sale">
+                                <p>-<span>{{$item->sale}}</span>%</p>
+                            </div>
+                            <div class="price">
+                                <p><span>{{$item->price}}</span>грн</p>
+                                <em><span>{{$item->sale_price}}</span>грн</em>
+                            </div>
+                            <em>Хід продажів</em>
+                            <div class="marks">
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="discript">
+                                <p>{{$item->name}}</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg"
-                             alt="">
-                        <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <div class="sale">
-                            <p>-50%</p>
-                        </div>
-                        <div class="price">
-                            <p><span>1077</span>грн</p>
-                            <em><span>2077</span>грн</em>
-                        </div>
-                        {{--                    <em>Хід продажів</em>--}}
-                        <div class="marks">
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                            <span><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="discript">
-                            <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -683,175 +313,36 @@
         <a href="#"><p>Усі товари <span><i class="fa-solid fa-chevron-right"></i></span></p></a>
     </div>
     <div class="cardList cardList_all">
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
+        @foreach($product_cat as $item)
+            <div class="card">
+                <div class="img">
+                    <img src="{{$item->img}}" alt="">
+                    <div class="sale_time">
+                        <p>Sale 🔥 <span>24:44:17</span></p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="sale">
+                        <p>-<span>{{$item->sale}}</span>%</p>
+                    </div>
+                    <div class="price">
+                        <p><span>{{$item->price}}</span>грн</p>
+                        <em><span>{{$item->sale_price}}</span>грн</em>
+                    </div>
+                    <em>Хід продажів</em>
+                    <div class="marks">
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <div class="discript">
+                        <p>{{$item->name}}</p>
+                    </div>
                 </div>
             </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-
+        @endforeach
     </div>
 </div>
 <div class="banners_country">
@@ -899,510 +390,36 @@
         <h2>Кращі товари спеціально для вас</h2>
     </div>
     <div class="cardList cardList_all">
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
+        @foreach($products_all as $item)
+            <div class="card">
+                <div class="img">
+                    <img src="{{$item->img}}" alt="">
+                    <div class="sale_time">
+                        <p>Sale 🔥 <span>24:44:17</span></p>
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="sale">
+                        <p>-<span>{{$item->sale}}</span>%</p>
+                    </div>
+                    <div class="price">
+                        <p><span>{{$item->price}}</span>грн</p>
+                        <em><span>{{$item->sale_price}}</span>грн</em>
+                    </div>
+                    <em>Хід продажів</em>
+                    <div class="marks">
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <div class="discript">
+                        <p>{{$item->name}}</p>
+                    </div>
                 </div>
             </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="https://img.joomcdn.net/b6f375215a59629e6c3b9ac365478494e1216586_200_200.jpeg" alt="">
-                <div class="sale_time">
-                    <p>Sale 🔥 <span>24:44:17</span></p>
-                </div>
-            </div>
-            <div class="text">
-                <div class="sale">
-                    <p>-50%</p>
-                </div>
-                <div class="price">
-                    <p><span>1077</span>грн</p>
-                    <em><span>2077</span>грн</em>
-                </div>
-                {{--                    <em>Хід продажів</em>--}}
-                <div class="marks">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                </div>
-                <div class="discript">
-                    <p><span>Суцільний колір Non-slip Диван Кришка Потовщення м'який</span>...</p>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
     <div class="button_see">
         <button>Показати ще</button>

@@ -289,6 +289,19 @@ h2{
     font-size: 12px;
     margin-top: 8px;
 }
+.cardList_all .discript p{
+    max-height: 3em;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+.cardList_all  .discript  p:after{
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom:0;
+    background: white;
+}
 .action_week .title{
     font-size: 24px;
     font-weight: 500;
