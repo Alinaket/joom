@@ -73,5 +73,10 @@ class ProfileController extends Controller
             ;
 
     }
+    public function product_joom (){
+        $products = Product::orderBy(DB::raw('RAND()'))->get();
+
+        return view("profile.product_joom")->with("products",$products);
+    }
 }
 

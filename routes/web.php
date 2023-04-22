@@ -27,5 +27,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 Route::get('/joom', [ProfileController::class, 'joom'])->name('profile.joom');
+Route::get('/product_joom', [ProfileController::class, 'product_joom'])->name('profile.product_joom');
 
 require __DIR__.'/auth.php';
