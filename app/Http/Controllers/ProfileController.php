@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -77,6 +78,16 @@ class ProfileController extends Controller
         $products = Product::orderBy(DB::raw('RAND()'))->get();
 
         return view("profile.product_joom")->with("products",$products);
+    }
+    public function category (){
+        $category = Category::orderBy("parent_id")->get();
+        $data = [];
+        foreach ($category as $item){
+            $data[$item->parent_id][]=$item->name;
+        }
+        dd($data);
+        return view("components.category")->with("category",$data);
+
     }
 }
 

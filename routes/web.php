@@ -28,5 +28,6 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/joom', [ProfileController::class, 'joom'])->name('profile.joom');
 Route::get('/product_joom', [ProfileController::class, 'product_joom'])->name('profile.product_joom');
+Route::get('/category', [ProfileController::class, 'category'])->name('profile.category');
 
 require __DIR__.'/auth.php';
