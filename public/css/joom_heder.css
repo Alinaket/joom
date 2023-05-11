@@ -40,7 +40,7 @@ img{
     padding: 9px 24px;
     border-radius: 0 0 12px 12px ;
     font-size: 14px;
-    display: none;
+    /*display: none;*/
 }
 .nav_container .help li, .help li a{
     text-decoration: 0;

@@ -60,34 +60,90 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
-    public function joom (){
+
+    public function joom()
+    {
         $products = Product::limit(6)->orderBy(DB::raw('RAND()'))->get();
-        $interesting =Product::limit(8)->orderBy(DB::raw('RAND()'))->get();
-        $product_cat =  Product::limit(6)->orderBy(DB::raw('RAND()'))->get();
-        $products_all =  Product::limit(18)->orderBy(DB::raw('RAND()'))->get();
+        $interesting = Product::limit(8)->orderBy(DB::raw('RAND()'))->get();
+        $product_cat = Product::limit(6)->orderBy(DB::raw('RAND()'))->get();
+        $products_all = Product::limit(18)->orderBy(DB::raw('RAND()'))->get();
 
         return view("profile.joom")
             ->with("products", $products)
-            ->with("interesting",$interesting)
-            ->with("product_cat",$product_cat)
-            ->with("products_all",$products_all)
-            ;
+            ->with("interesting", $interesting)
+            ->with("product_cat", $product_cat)
+            ->with("products_all", $products_all);
 
     }
-    public function product_joom (){
+
+    public function product_joom()
+    {
         $products = Product::orderBy(DB::raw('RAND()'))->get();
 
-        return view("profile.product_joom")->with("products",$products);
+        return view("profile.product_joom")->with("products", $products);
     }
-    public function category (){
-        $category = Category::orderBy("parent_id")->get();
-        $data = [];
-        foreach ($category as $item){
-            $data[$item->parent_id][]=$item->name;
-        }
-        dd($data);
-        return view("components.category")->with("category",$data);
 
+    public function category()
+    {
+        $category = Category::orderBy("id")->get();
+        $data = [];
+        foreach ($category as $item) {
+            $away = $this->find_parent($data, $item->parent_id, $item->id); // ключі вкладенності масиву
+            if ($item->parent_id === 0) {     // находиме пирші нольові категорії
+                $data[] = [
+                    "id" => $item->id,
+                    "name" => $item->name,
+                    "data" => [],
+                ];
+            } else if (is_array($away)) {  // обчинюєме ошибку, превірка на масив
+                if (count($away) == 1) {     //добавляємо підкатегорію
+                    $data[$away[0]]["data"][] = [
+                        "id" => $item->id,
+                        "name" => $item->name,
+                        "data" => [],
+                    ];
+                }
+                if (count($away) == 2) {
+                    $data[$away[0]]["data"][$away[1]]["data"][] = [
+                        "id" => $item->id,
+                        "name" => $item->name,
+                        "data" => [],
+                    ];
+                }
+                if (count($away) == 3) {
+                    $data[$away[0]]["data"][$away[1]]["data"][$away[2]]["data"][] = [
+                        "id" => $item->id,
+                        "name" => $item->name,
+                        "data" => [],
+                    ];
+                }
+                if (count($away) == 4) {
+                    $data[$away[0]]["data"][$away[1]]["data"][$away[2]]["data"][$away[3]]["data"][] = [
+                        "id" => $item->id,
+                        "name" => $item->name,
+                        "data" => [],
+                    ];
+                }
+            }
+        }
+//        dd($data);
+        return view("components.category")->with("category", $data);
+    }
+
+    private function find_parent($data, $find_id, $my_id)
+    {
+        foreach ($data as $key => $item) {   // переникуєме вложеность масива категорій
+            if (isset($item["id"])) {    // обробка помилок, існування id
+                if ($item["id"] === $find_id) {    // нашли позицію парент айді в массиві
+                    return [$key];   // завершення програми
+                }
+                $away = $this->find_parent($item["data"], $find_id, $my_id); // якщо не знайшло парент айді в данному рівні вложенністі то
+                                                                             // шукаємо у наступоному рівні влоденності
+                if ($away !== null) {           // обробка помилки, на існування результату евей
+                    return [$key, ...$away];  // передаємо ключі вкладеності
+                }
+            }
+        };
     }
 }
 
