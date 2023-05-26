@@ -93,6 +93,7 @@ class ProfileController extends Controller
                 $data[] = [
                     "id" => $item->id,
                     "name" => $item->name,
+                    "img"=>$item->img,
                     "data" => [],
                 ];
             } else if (is_array($away)) {  // обчинюєме ошибку, превірка на масив
@@ -100,6 +101,7 @@ class ProfileController extends Controller
                     $data[$away[0]]["data"][] = [
                         "id" => $item->id,
                         "name" => $item->name,
+                        "img"=>$item->img,
                         "data" => [],
                     ];
                 }
@@ -107,6 +109,7 @@ class ProfileController extends Controller
                     $data[$away[0]]["data"][$away[1]]["data"][] = [
                         "id" => $item->id,
                         "name" => $item->name,
+                        "img"=>$item->img,
                         "data" => [],
                     ];
                 }
@@ -114,6 +117,7 @@ class ProfileController extends Controller
                     $data[$away[0]]["data"][$away[1]]["data"][$away[2]]["data"][] = [
                         "id" => $item->id,
                         "name" => $item->name,
+                        "img"=>$item->img,
                         "data" => [],
                     ];
                 }
@@ -121,6 +125,7 @@ class ProfileController extends Controller
                     $data[$away[0]]["data"][$away[1]]["data"][$away[2]]["data"][$away[3]]["data"][] = [
                         "id" => $item->id,
                         "name" => $item->name,
+                        "img"=>$item->img,
                         "data" => [],
                     ];
                 }
@@ -144,6 +149,16 @@ class ProfileController extends Controller
                 }
             }
         };
+    }
+
+    public function category_sub(Request $request){
+//        dd($request->input("cosplay"));
+        $parent_id=$request->input("parent_id");
+//        dd($parent_id);
+        $category= Category::where("parent_id", $parent_id)->get();
+        return view("profile.category_sub")
+        ->with("category", $category);
+
     }
 }
 

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static get()
  * @method static limit(int $int)
  * @method static orderBy(\Illuminate\Contracts\Database\Query\Expression $raw)
+ * @method static where()
  */
 class Product extends Model
 {

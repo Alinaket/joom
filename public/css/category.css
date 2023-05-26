@@ -1,3 +1,63 @@
-ol{
-    font-family: "Segoe UI";
+body{
+    background: #171717;
+
+}
+
+.background{
+    background: #171717;
+    color: #435769;
+    font-family: Arial;
+    padding:20px 0 0  10px;
+}
+li{
+    padding-top:20px;
+    font-size: 20px;
+}
+.permanent{
+    border-bottom: solid 1px #414141;
+    color: #b6b6b6;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.permanent span{
+    font-size: 25px;
+    margin: auto;
+}
+.all_category{
+    font-size: 20px;
+    color: #b6b6b6;
+}
+.all_category span{
+    font-size: 10px;
+    color: #414141;
+    padding-right: 10px;
+    align-items: center;
+}
+
+/*li:hover{*/
+/*    !*color: #7c0000;*!*/
+/*}*/
+.card{
+    position: relative;
+    width: 500px;
+    height: 400px;
+}
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+.card h3{
+    position: absolute;
+    font-size: 20px;
+    background: white;
+    bottom:20px;
+    left: 20px;
+    color: #1a202c;
+    padding: 10px 15px;
 }
