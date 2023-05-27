@@ -1,10 +1,5 @@
 body{
-    background: #171717;
-
-}
-
-.background{
-    background: #171717;
+    background: #1a1a1a;
     color: #435769;
     font-family: Arial;
     padding:20px 0 0  10px;
@@ -37,7 +32,6 @@ li{
     padding-right: 10px;
     align-items: center;
 }
-
 /*li:hover{*/
 /*    !*color: #7c0000;*!*/
 /*}*/
@@ -50,9 +44,10 @@ li{
     height: 100%;
     width: 100%;
     object-fit: cover;
-
+    opacity: 0.7;
+    transition-duration: 0.3s;
 }
-.card h3{
+.card a{
     position: absolute;
     font-size: 20px;
     background: white;
@@ -60,4 +55,12 @@ li{
     left: 20px;
     color: #1a202c;
     padding: 10px 15px;
+    transition-duration: 0.3s;
+}
+.card:hover a{
+    color: #ffffff;
+    background: #1a1a1a;
+}
+.card:hover img {
+    opacity: 1;
 }
