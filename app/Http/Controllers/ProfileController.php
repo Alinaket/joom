@@ -155,10 +155,32 @@ class ProfileController extends Controller
 //        dd($request->input("cosplay"));
         $parent_id=$request->input("parent_id");
 //        dd($parent_id);
+        $parent = Category::where("id", $parent_id)->first();
+//        dd($parent_id);
         $category= Category::where("parent_id", $parent_id)->get();
-        return view("profile.category_sub")
-        ->with("category", $category);
+        $data_category= [];
+        $category_success=[];
+        foreach($category as $item){
+            $data_category[]=$item->id;
+        }
+        $category_sub=Category::whereIn("parent_id", $data_category)->get();
+        foreach($category as $item){
+            $category_success[]=$this->find_success($category_sub, $item->id);
+        }
+//        dd($category_sub);
 
+        return view("profile.category_sub")
+        ->with("category", $category)
+        ->with("parent", $parent);
+
+    }
+    private function find_success($arr, $find_id){
+        foreach ($arr as $item){
+            if($item->parent_id == $find_id){
+                return true;
+            }
+        }
+        return false;
     }
 }
 

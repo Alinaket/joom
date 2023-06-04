@@ -4,6 +4,7 @@
         $img=asset("img/no-image-available.png");
     }
     ?>
+{{--{{dd($parent)}}--}}
     <div class="card">
         <div class="img">
             <img src="{{$img}}" alt="">

@@ -4,7 +4,12 @@
 
 <div class="background">
     <p class="permanent">Каталог товарів <span><i class="fa-solid fa-xmark"></i></span></p>
-    <div class="all_category"><span><i class="fa-solid fa-chevron-left"></i></span>Всі категорії</div>
+{{--    <div class="all_category"><span><i class="fa-solid fa-chevron-left"></i></span>Всі категорії</div>--}}
+    @if($parent)
+        {{--    {{dd($parent)}}--}}
+
+        <a class="all_category" href="{{route("profile.category_sub", ["parent_id"=>$parent->parent_id])}}"><span><i class="fa-solid fa-chevron-left"></i></span>Всі категорії</a>
+    @endif
     <ol class="cat0">
         @foreach($category as $item)
             <li>
