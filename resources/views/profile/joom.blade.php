@@ -64,7 +64,7 @@
         <div class="cardList cardList_all">
 
                 @foreach($products as $item)
-                <div class="card">
+                <a class="card" href="{{route("profile.product_joom")}}">
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
                         <div class="sale_time">
@@ -91,7 +91,7 @@
                             <p>{{$item->name}}</p>
                         </div>
                     </div>
-                </div>
+                </a>
                 @endforeach
         </div>
     </div>

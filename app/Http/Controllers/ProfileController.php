@@ -17,6 +17,7 @@ class ProfileController extends Controller
     /**
      * Display the user's profile form.
      */
+    private $category_info = [];
     public function edit(Request $request): View
     {
         return view('profile.edit', [
@@ -78,9 +79,24 @@ class ProfileController extends Controller
 
     public function product_joom()
     {
-        $products = Product::orderBy(DB::raw('RAND()'))->get();
+        $product = Product::orderBy(DB::raw('RAND()'))->first();
+        $product = Product::where("id",4)->first();
+        $this->find_category_list($product->category);
+        return view("profile.product_joom")
+            ->with("products", $product)
+            ->with("category_link", $this->category_info);
+    }
 
-        return view("profile.product_joom")->with("products", $products);
+    private function find_category_list($category_id){
+        $category = Category::where("id", $category_id)->first();
+//        $data_category = Category::where("id",$category->parent_id)->first();
+        $data_category=[];
+
+        if($category->parent_id != 0){
+            $data_category = $this->find_category_list($category->parent_id);
+        }
+        $this->category_info[] = $category;
+
     }
 
     public function category()
@@ -131,7 +147,7 @@ class ProfileController extends Controller
                 }
             }
         }
-//        dd($data);
+//        dd($category);
         return view("components.category")->with("category", $data);
     }
 
@@ -182,5 +198,6 @@ class ProfileController extends Controller
         }
         return false;
     }
+
 }
 
