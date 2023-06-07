@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset("css/recet.css")}}">
     <link rel="stylesheet" href="{{asset("css/joom_heder.css")}}">
+    <link rel="stylesheet" href="{{asset("css/product_joom.css")}}">
     <title>Document</title>
 </head>
 <body>

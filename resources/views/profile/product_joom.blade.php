@@ -1,450 +1,650 @@
 @extends("layouts.app_head")
 @section("content")
-    <style>
-        .link_list a:after{
-            content: " /";
-        }
-        .link_list a:last-child:after{
-            content: " ";
-        }
-    </style>
-<div class="link_list">
-    <a href="">Головна</a>
-    <a href="">Каталог</a>
-    @foreach($category_link as $item)
+    <div class="all_container">
+        <div class="link_list">
+            <a href="">Головна</a>
+            <a href="">Каталог</a>
+            @foreach($category_link as $item)
 
-        <a href="">{{$item->name}}</a>
-    @endforeach
-</div>
-<div class="box_1">
-    <div class="all_img">
-        <div class="list_img">
-            <div class="img">
-                <img src="https://img.joomcdn.net/f878344af4957e897ffd1f4ea3899449d800b904_original.jpeg" alt="">
+                <a href="">{{$item->name}}</a>
+            @endforeach
+        </div>
+        <div class="box_1">
+            <div class="all_img">
+                <div class="list_img">
+                    <div class="img">
+                        <img src="https://img.joomcdn.net/f878344af4957e897ffd1f4ea3899449d800b904_original.jpeg"
+                             alt="">
+                    </div>
+                    <div class="img">
+                        <img src="https://img.joomcdn.net/9718ca91c6e258d2890e1e645c9a763572220040_100_100.jpeg" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="https://img.joomcdn.net/e7d8d3e6765e3d9e1905d16daee2d53e6fcd05da_100_100.jpeg" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="	https://img.joomcdn.net/0e78713201fa14b87f8426a876c0e3ce97db6c57_original.jpeg"
+                             alt="">
+                    </div>
+                    <div class="img">
+                        <img src="	https://img.joomcdn.net/332ac0c26f43d61599bd49eb15132788dc7c4965_original.jpeg"
+                             alt="">
+                    </div>
+                    <div class="img">
+                        <img src="	https://img.joomcdn.net/39e717afa464f6a39785334e576f6dc6e35716b6_100_100.jpeg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="title_img">
+                    <img src="https://img.joomcdn.net/f878344af4957e897ffd1f4ea3899449d800b904_200_200.jpeg" alt="">
+                </div>
             </div>
-            <div class="img">
-                <img src="https://img.joomcdn.net/9718ca91c6e258d2890e1e645c9a763572220040_100_100.jpeg" alt="">
-            </div>
-            <div class="img">
-                <img src="https://img.joomcdn.net/e7d8d3e6765e3d9e1905d16daee2d53e6fcd05da_100_100.jpeg" alt="">
-            </div>
-            <div class="img">
-                <img src="	https://img.joomcdn.net/0e78713201fa14b87f8426a876c0e3ce97db6c57_original.jpeg"
-                     alt="">
-            </div>
-            <div class="img">
-                <img src="	https://img.joomcdn.net/332ac0c26f43d61599bd49eb15132788dc7c4965_original.jpeg"
-                     alt="">
-            </div>
-            <div class="img">
-                <img src="	https://img.joomcdn.net/39e717afa464f6a39785334e576f6dc6e35716b6_100_100.jpeg" alt="">
+            <div class="reviews">
+                <div class="title">
+                    <h3>Відгуки<span>1500</span></h3>
+                    <div class="marks">
+                        <ul>
+                            <li class="black">Всі</li>
+                            <li><span><i class="fa-solid fa-image"></i></span>198</li>
+                            <li><span><i class="fa-regular fa-message"></i></span>298</li>
+                            <li><span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span> 1000+
+                            </li>
+
+                            <li><span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span> 141
+                            </li>
+                            <li><span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span> 66
+                            </li>
+                            <li><span><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span> 21
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-star"></i></span> 61
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="comments">
+                    <div class="cardList">
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="img_profil">
+                                <img
+                                    src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <div class="box3">
+                                    <h4 class="name">Наталка Т.</h4>
+                                    <p class="data">10 квітня</p>
+                                </div>
+                                <div class="box4">
+                                <span class="stars">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span></span>
+                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
+                                </div>
+                            </div>
+                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
+                                продала🙈</p>
+                            <div class="img_products">
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
+                                        alt="">
+                                </div>
+                                <div class="img">
+                                    <img
+                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="title_img">
-            <img src="https://img.joomcdn.net/f878344af4957e897ffd1f4ea3899449d800b904_200_200.jpeg" alt="">
-        </div>
-    </div>
-    <div class="reviews">
-        <div class="title">
-            <h3>Відгуки<span>1500</span></h3>
-            <div class="marks">
+        <div class="box_2">
+            <div class="title">
+                <div class="info_product">
+                    <h1>Для корпусу iPhone 3D Astronaut складаний чохол-тримач стійки для iPhone 13 12 11 Pro Max XS Max
+                        7 8
+                        Plus
+                        Покриття об'єктива захист кришки</h1>
+                    <em class="red"><span><i class="fa-solid fa-star"></i></span>4,7</em>
+                    <em><span>91</span>% рекомендують</em>
+                    <em>більше<span>3000</span>покупок</em>
+                </div>
+                <div class="container">
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span><i class="fa-solid fa-link"></i></span>
+                </div>
+            </div>
+            <div class="price">
+                <div class="container_price">
+                    <h2>від 140 грн <span class="sale_price">237 грн</span></h2>
+                    <p><span>3 дні</span>Sale 🔥</p>
+                </div>
+                <div class="container_buyer">
+                    <p>В кошик</p>
+                    <p>Придбати зараз</p>
+                </div>
+            </div>
+            <div class="delivery">
+                <p><span><i class="fa-solid fa-calendar-days"></i>></span>Доставка від 16 днів</p>
+                <div class="delivery_sale"><span><i class="fa-solid fa-percent"></i></span></div>
+            </div>
+            <div class="color_product">
+                <h3>Колір</h3>
                 <ul>
-                    <li class="black">Всі</li>
-                    <li><span><i class="fa-solid fa-image"></i></span>198</li>
-                    <li><span><i class="fa-regular fa-message"></i></span>298</li>
-                    <li><span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span> 1000+
-                    </li>
-
-                    <li><span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span> 141
-                    </li>
-                    <li><span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span> 66
-                    </li>
-                    <li><span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span> 21
-                    </li>
-                    <li>
-                        <span><i class="fa-solid fa-star"></i></span> 61
-                    </li>
+                    <li><img
+                            src="https://celes.club/uploads/posts/2022-11/1667276263_1-celes-club-p-temno-serii-fon-oboi-instagram-1.jpg"
+                            alt=""></li>
+                    <li><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy92k8i8BqjpzusUTBH-yGILktHibRysr3BXa5bScX_WNAQgQljum8GIrlpL5HOuO3v1g&usqp=CAU"
+                            alt=""></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Color-blue.JPG" alt=""></li>
+                    <li><img src="https://colourlex.com/wp-content/uploads/2021/02/Emerald-green-painted-swatch.jpg"
+                             alt=""></li>
+                    <li><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Purple_website.svg/1200px-Purple_website.svg.png"
+                            alt=""></li>
+                    <li><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Solid_white_bordered.svg/2048px-Solid_white_bordered.svg.png"
+                            alt=""></li>
                 </ul>
             </div>
-        </div>
-        <div class="comments">
-            <div class="cardList">
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
+            <div class="size_product">
+                <h3>Розмір<span></span></h3>
+                <ul>
+                    <li>Huawei Mate 30</li>
+                    <li>Huawei Mate 30 Lite</li>
+                    <li>Huawei Mate 30 PRO</li>
+                    <li>Huawei P20</li>
+                    <li>Huawei P20 Lite</li>
+                    <li>Huawei P20 PRO</li>
+                    <li>Huawei P30</li>
+                    <li>Huawei P30 Lite</li>
+                    <li>Huawei P30 PRO</li>
+                    <li>Huawei P40</li>
+                    <li>Huawei P40 Lite 4G</li>
+                    <li>Huawei P40 Lite 5G</li>
+                    <li>Huawei P40 PRO</li>
+                    <li>Huawei P Smart 2019</li>
+                    <li>Huawei P Smart 2020</li>
+                    <li>Huawei P Smart 2021</li>
+                    <li>iPhone 6 / 6S</li>
+                    <li>iPhone 6 Plus / 6S Plus</li>
+                    <li>iPhone SE 2020</li>
+                    <li>iPhone 7 / 8</li>
+                    <li>iPhone 7 Plus / 8 Plus</li>
+                    <li>iPhone X / XS</li>
+                    <li>iPhone XR</li>
+                    <li>iPhone XS MAX</li>
+                    <li>iPhone 11</li>
+                    <li>iPhone 11 PRO</li>
+                    <li>iPhone 11 PRO MAX</li>
+                    <li>iPhone 12</li>
+                    <li>iPhone 12 Mini</li>
+                    <li>iPhone 12 PRO</li>
+                </ul>
+            </div>
+            <div class="shop">
+                <div class="shop">
+                    <div class="img">
+                        <img src="https://avatars.joomcdn.net/b7423bf07ad556d1a9561acad8d28b955e2d199b_original.jpeg"
                              alt="">
                     </div>
                     <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
+                        <h4>honglilai</h4>
+                        <em><span class="red_star"><i class="fa-solid fa-star"></i></span>4,6 / 9 000+</em>
+                        <em>150+ товарів</em>
+                        <em><span><i class="fa-solid fa-circle-info"></i></span>Інформація про продавця</em>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
+                <div class="arrow">
+                    <span><i class="fa-solid fa-chevron-right"></i></span>
                 </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
+            </div>
+            <div class="info_shop">
+                <h3>Опис</h3>
+                <ul>
+                    <li>Тип : Бампер</li>
+                    <li>Дизайн : Рівнина..</li>
+                </ul>
+                <div class="all_description">
+                    <em>Подивитись повний опис</em>
+                    <em>Знайшли неточність?</em>
                 </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="img_profil">
-                        <img src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                             alt="">
-                    </div>
-                    <div class="text">
-                        <div class="box3">
-                            <h4 class="name">Наталка Т.</h4>
-                            <p class="data">10 квітня</p>
-                        </div>
-                        <div class="box4">
-                                <span class="stars">
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                    <span><i class="fa-solid fa-star"></i></span></span>
-                            <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                        </div>
-                    </div>
-                    <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                        продала🙈</p>
-                    <div class="img_products">
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                 alt="">
-                        </div>
-                        <div class="img">
-                            <img src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                 alt="">
-                        </div>
-
-                    </div>
-                </div>
+            </div>
+            <div class="guarantee">
+                <h3>Гарантія</h3>
+                <p><span><i class="fa-solid fa-box"></i></span>Повернемо гроші, якщо товар не доставлять протягом 105
+                    днів після оплати. У вас є 2 тижні для подачі заявки на повернення — до 119-го дня.</p>
+                <p><span><i class="fa-solid fa-shield"></i></span>Товар не відповідає опису? Напишіть нам протягом 30
+                    днів після отримання!</p>
+                <p><span><i class="fa-brands fa-cc-discover"></i></span>У разі скасування гроші надійдуть на рахунок
+                    протягом 14 днів.</p>
             </div>
         </div>
     </div>
-</div>
-<div class="box_2">
-    <div class="title">
-        <h1>Для корпусу iPhone 3D Astronaut складаний чохол-тримач стійки для iPhone 13 12 11 Pro Max XS Max 7 8
-            Plus
-            Покриття об'єктива захист кришки</h1>
-        <div class="container">
-                <span class="stars">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                <em>4,7</em>
-                </span>
-            <p>1500+ відгуків</p>
-            <p><span><i class="fa-regular fa-heart"></i></span>У вибране</p>
-            <p><span><i class="fa-solid fa-link"></i></span>Поширити</p>
+    <div class="other_product">
+        <div class="cardList">
+{{--            @foreach($products_all as $item)--}}
+{{--                <div class="card">--}}
+{{--                    <div class="img">--}}
+{{--                        <img src="{{$item->img}}" alt="">--}}
+{{--                        <div class="sale_time">--}}
+{{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="text">--}}
+{{--                        <div class="sale">--}}
+{{--                            <p>-<span>{{$item->sale}}</span>%</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="price">--}}
+{{--                            <p><span>{{$item->price}}</span>грн</p>--}}
+{{--                            <em><span>{{$item->sale_price}}</span>грн</em>--}}
+{{--                        </div>--}}
+{{--                        <em>Хід продажів</em>--}}
+{{--                        <div class="marks">--}}
+{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
+{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
+{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
+{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
+{{--                            <span><i class="fa-solid fa-star"></i></span>--}}
+{{--                        </div>--}}
+{{--                        <div class="discript">--}}
+{{--                            <p>{{$item->name}}</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
         </div>
     </div>
-</div>
-
-</div>
+    <div class="all_info_product">
+        <h4>Для корпусу iPhone 3D Astronaut складаний чохол-тримач стійки для iPhone 13 12 11 Pro Max XS Max 7 8 Plus
+            Покриття об'єктива захист кришки — купити
+            товар онлайн з безкоштовною доставкою по всьому світу!</h4>
+        <ul>
+            <li>- Доступні кольори: Чорний, Рожевий, Синій, Зелений, Фіолетовий, Білий</li>
+            <li>- Якісні матеріали:</li>
+            <li>- Якісні фото та реальні відгуки покупців.</li>
+            <li>- Великий розмірний ряд: Samsung Galaxy S21 Plus, Xiaomi Note 10, iPhone SE 2020, Huawei P Smart 2020,
+                Huawei P30, Redmi Note 10S, Redmi Note 8T, Samsung Galaxy A51 4G, iPhone 13 PRO MAX, iPhone 7 Plus / 8
+                Plus, Huawei P40 Lite 4G, Samsung Note 10 Lite, Samsung Galaxy S20 Plus, Samsung Galaxy S21 Ultra,
+                Xiaomi Note 10 Lite, Huawei P Smart 2019, Huawei P30 PRO, Samsung Galaxy A52, Samsung Note 10 Plus 5G,
+                Xiaomi Mi 9, iPhone 6 / 6S, iPhone 7 / 8, Huawei P20, Redmi Note 10 PRO, Samsung Galaxy S21, Xiaomi 11
+                PRO, iPhone 11, iPhone 13, Huawei P40, Huawei P40 PRO, Redmi Note 8, Redmi Note 8 PRO, Samsung Galaxy
+                A51 5G, iPhone XR, Huawei Mate 30 PRO, Redmi Note 9, Samsung Galaxy A32 5G, iPhone 13 Mini, iPhone 13
+                PRO, Samsung S10 Lite 2020, Xiaomi 11 Ultra, Redmi 9A, Redmi Note 9 PRO, Samsung Galaxy A12, Samsung
+                Galaxy A32 4G, Samsung Galaxy A71 4G, Huawei Mate 30, Huawei P20 Lite, Samsung Galaxy A50, Samsung Note
+                20 Ultra, Samsung Galaxy A22 5G, Samsung Galaxy A31, Samsung Galaxy A72, Samsung Galaxy Note 10 5G,
+                Xiaomi Mi CC9, Huawei P40 Lite 5G, Redmi 9C, Xiaomi 11, iPhone 11 PRO, iPhone 11 PRO MAX, Huawei Mate 30
+                Lite, Samsung Galaxy A22 4G, Xiaomi 10, Xiaomi 10T PRO, Redmi 9, Samsung Note 10 Plus, Xiaomi 11 Lite,
+                iPhone X / XS, Xiaomi 10 Lite, iPhone 12, iPhone 12 PRO, Huawei P30 Lite, Samsung Galaxy Note 20,
+                Samsung Galaxy S10 Plus, Samsung Galaxy S20 FE, Samsung Galaxy S20 Ultra, iPhone 12 PRO MAX, Samsung
+                Galaxy Note 10, iPhone 12 Mini, Huawei P20 PRO, Redmi 8, Redmi Note 10 PRO MAX, Redmi Note 9S, Samsung
+                Galaxy S10, Xiaomi 10T Lite, iPhone 6 Plus / 6S Plus, Huawei P Smart 2021, Redmi Note 10 4G, Redmi Note
+                9 PRO MAX, Samsung Galaxy S20, Samsung Galaxy S21 FE, Redmi 8A, iPhone XS MAX
+            </li>
+        </ul>
+    </div>
 @stop
+
+
+
+
+
