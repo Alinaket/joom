@@ -82,9 +82,11 @@ class ProfileController extends Controller
         $product = Product::orderBy(DB::raw('RAND()'))->first();
         $product = Product::where("id",4)->first();
         $this->find_category_list($product->category);
+        $products_all = Product::limit(14)->orderBy(DB::raw('RAND()'))->get();
         return view("profile.product_joom")
             ->with("products", $product)
-            ->with("category_link", $this->category_info);
+            ->with("category_link", $this->category_info)
+            ->with("products_all", $products_all);
     }
 
     private function find_category_list($category_id){
