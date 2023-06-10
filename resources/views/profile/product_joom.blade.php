@@ -76,384 +76,64 @@
                 </div>
                 <div class="comments">
                     <div class="cardList">
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
+                        @foreach($profile as $item)
+                            <div class="card">
+                                <div class="info_user">
+                                    <div class="img_profile">
+                                        <img
+                                            src="{{$item->avatar}}"
+                                            alt="">
+                                        <div class="text">
+                                            <div class="box3">
+                                                <h4 class="name">{{$item->name}}</h4>
+                                                <p class="data">{{$item->data}}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                                </div>
-                            </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
+                                    <div class="box4">
+                                        <div class="stars">
+                                            @for($i=0; $i<$item->marks; $i++)
+                                                <span><i class="fa-solid fa-star"></i></span>
+                                            @endfor
                                         </div>
+                                        <p class="goods">Redmi Note 8 | Фіолетовий</p>
                                     </div>
                                 </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                                </div>
-                            </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
+                                <p class="response">{{$item->coment}}</p>
+                                <div class="img_products">
+                                    @foreach($img_comments as $item_img )
+                                        @if($item_img->comment_id == $item->id)
+                                            <div class="img">
+                                                <img
+                                                    src="{{asset($item_img->img)}}"
+                                                    alt="">
+                                            </div>
+                                        @endif
+                                    @endforeach
 
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
                                 </div>
                             </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                                </div>
-                            </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                                </div>
-                            </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                                </div>
-                            </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                                </div>
-                            </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="info_user">
-                                <div class="img_profile">
-                                    <img
-                                        src="https://avatars.joomcdn.net/0b18c3bdf2b842463f354dcb6c5a80775025fc08_100_100.jpeg"
-                                        alt="">
-                                    <div class="text">
-                                        <div class="box3">
-                                            <h4 class="name">Наталка Т.</h4>
-                                            <p class="data">10 квітня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box4">
-                                    <div class="stars">
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                        <span><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <p class="goods">Redmi Note 8 | Фіолетовий</p>
-                                </div>
-                            </div>
-                            <p class="response">Дуже прикольний чохол, гарної якості. Довго йшов. Поки дійшов телефон
-                                продала🙈</p>
-                            <div class="img_products">
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/5cb61791b5aec6989e71fbf39a88824110c9713b_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/0560923deb5be1515a07c4c574483ecf868fff4e_75_100.jpeg"
-                                        alt="">
-                                </div>
-                                <div class="img">
-                                    <img
-                                        src="https://ugc.joomcdn.net/a3517b164c0ebe84fa5aceb2ba68c426098da61a_75_100.jpeg"
-                                        alt="">
-                                </div>
-
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
         <div class="box_2">
             <div class="title">
-                <div class="info_product">
-                    <h1>Для корпусу iPhone 3D Astronaut складаний чохол-тримач стійки для iPhone 13 12 11 ...</h1>
-                    <div class="em">
-                        <em class="red"><span><i class="fa-solid fa-star"></i></span>4,7</em>
-                        <em><span>91</span>% рекомендують</em>
-                        <em>більше<span>3000</span>покупок</em>
+                @foreach($item as $product)
+                    <div class="info_product">
+{{--                        <h1>Для корпусу iPhone 3D Astronaut складаний чохол-тримач стійки для iPhone 13 12 11 ...</h1>--}}
+                        <h1>{{asset($item->name)}}</h1>
+                        <div class="em">
+                            <em class="red"><span><i class="fa-solid fa-star"></i></span>4,7</em>
+                            <em><span>91</span>% рекомендують</em>
+                            <em>більше<span>3000</span>покупок</em>
+                        </div>
                     </div>
-                </div>
-                <div class="container_icon">
-                    <span><i class="fa-regular fa-heart"></i></span>
-                    <span><i class="fa-solid fa-link"></i></span>
-                </div>
+                    <div class="container_icon">
+                        <span><i class="fa-regular fa-heart"></i></span>
+                        <span><i class="fa-solid fa-link"></i></span>
+                    </div>
             </div>
             <div class="price">
                 <div class="container_price">
@@ -571,6 +251,8 @@
                     протягом 14 днів.</p>
             </div>
         </div>
+        @endforeach
+
     </div>
     </div>
     <div class="other_product">
@@ -580,9 +262,9 @@
                 <div class="card">
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
-{{--                        <div class="sale_time">--}}
-{{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
-{{--                        </div>--}}
+                        {{--                        <div class="sale_time">--}}
+                        {{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
+                        {{--                        </div>--}}
                     </div>
                     <div class="text">
                         <div class="sale">

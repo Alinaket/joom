@@ -31,7 +31,7 @@
 </div>
 <div class="header">
     <div class="logo">
-        <a href="#"><img src="https://logovectordl.com/wp-content/uploads/2019/11/joom-logo-vector.png" alt=""></a>
+        <a href="{{route("profile.joom")}}"><img src="https://logovectordl.com/wp-content/uploads/2019/11/joom-logo-vector.png" alt=""></a>
     </div>
     <div class="box_input">
         <div class="input">

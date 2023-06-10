@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Category;
+use App\Models\ImgComment;
 use App\Models\Product;
+use App\Models\UserComent;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -77,16 +79,24 @@ class ProfileController extends Controller
 
     }
 
-    public function product_joom()
+    public function product_joom(Request $request)
     {
-        $product = Product::orderBy(DB::raw('RAND()'))->first();
-        $product = Product::where("id",4)->first();
+        $product_id = $request->input("product_id");
+//        dd($product_id);
+        $product = Product::where("id",$product_id)->first();
         $this->find_category_list($product->category);
         $products_all = Product::limit(14)->orderBy(DB::raw('RAND()'))->get();
+        $profile = UserComent::orderBy(DB::raw('RAND()'))->get();
+        $img_comments = ImgComment::all();
+
+//        dd($profile);
         return view("profile.product_joom")
             ->with("products", $product)
             ->with("category_link", $this->category_info)
-            ->with("products_all", $products_all);
+            ->with("products_all", $products_all)
+            ->with("profile", $profile)
+            ->with("img_comments", $img_comments)
+            ;
     }
 
     private function find_category_list($category_id){
