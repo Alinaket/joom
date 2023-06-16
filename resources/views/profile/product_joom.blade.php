@@ -10,6 +10,7 @@
             <a href="">{{$item->name}}</a>
         @endforeach
     </div>
+    @foreach($products as $item)
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">
@@ -38,8 +39,9 @@
                     </div>
                 </div>
                 <div class="title_img">
-                    <img src="https://img.joomcdn.net/f878344af4957e897ffd1f4ea3899449d800b904_200_200.jpeg" alt="">
+                    <img src="{{$item->img}}" alt="">
                 </div>
+                @endforeach
             </div>
             <div class="reviews">
                 <div class="title">
@@ -120,14 +122,14 @@
         </div>
         <div class="box_2">
             <div class="title">
-                @foreach($item as $product)
+                @foreach($product_one as $item)
+
                     <div class="info_product">
-{{--                        <h1>Для корпусу iPhone 3D Astronaut складаний чохол-тримач стійки для iPhone 13 12 11 ...</h1>--}}
-                        <h1>{{asset($item->name)}}</h1>
+                        <h1>{{$item->name}}</h1>
                         <div class="em">
-                            <em class="red"><span><i class="fa-solid fa-star"></i></span>4,7</em>
+                            <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$item->star}}</em>
                             <em><span>91</span>% рекомендують</em>
-                            <em>більше<span>3000</span>покупок</em>
+                            <em>більше<span> 3000 </span>покупок</em>
                         </div>
                     </div>
                     <div class="container_icon">
@@ -137,7 +139,8 @@
             </div>
             <div class="price">
                 <div class="container_price">
-                    <h2>від 140 грн <span class="sale_price">237 грн</span></h2>
+{{--                    <h2>від 140 грн <span class="sale_price">237 грн</span></h2>--}}
+                    <h2>від {{$item->price}} грн <span class="sale_price">{{$item->price_sale}} грн</span></h2>
                     <p><span class="sale_day">3 дні</span> Sale 🔥</p>
                 </div>
                 <div class="container_buyer">
@@ -252,7 +255,6 @@
             </div>
         </div>
         @endforeach
-
     </div>
     </div>
     <div class="other_product">

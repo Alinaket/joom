@@ -83,14 +83,16 @@ class ProfileController extends Controller
     {
         $product_id = $request->input("product_id");
 //        dd($product_id);
-        $product = Product::where("id",$product_id)->first();
+        $product = Product::where("id", $product_id)->first();
         $this->find_category_list($product->category);
-        $products_all = Product::limit(14)->orderBy(DB::raw('RAND()'))->get();
+        $products_all = Product::limit(14)->get();
+        $product_one = Product::limit(1)->get();
         $profile = UserComent::orderBy(DB::raw('RAND()'))->get();
         $img_comments = ImgComment::all();
 
 //        dd($profile);
         return view("profile.product_joom")
+            ->with("product_one", $product_one)
             ->with("products", $product)
             ->with("category_link", $this->category_info)
             ->with("products_all", $products_all)
