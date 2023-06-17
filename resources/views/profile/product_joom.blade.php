@@ -1,4 +1,4 @@
-@extends("layouts.app_head")
+{{--@extends("layouts.app_head")--}}
 @section("content")
     <link rel="stylesheet" href="{{asset("css/product_joom.css")}}">
     <link rel="stylesheet" href="{{asset("css/joom_heder.css")}}">
@@ -10,7 +10,7 @@
             <a href="">{{$item->name}}</a>
         @endforeach
     </div>
-    @foreach($products as $item)
+
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">
@@ -39,9 +39,8 @@
                     </div>
                 </div>
                 <div class="title_img">
-                    <img src="{{$item->img}}" alt="">
+                    <img src="{{$product->img}}" alt="">
                 </div>
-                @endforeach
             </div>
             <div class="reviews">
                 <div class="title">
@@ -78,7 +77,8 @@
                 </div>
                 <div class="comments">
                     <div class="cardList">
-                        @foreach($profile as $item)
+                        @foreach($comments as $item)
+
                             <div class="card">
                                 <div class="info_user">
                                     <div class="img_profile">
@@ -122,26 +122,27 @@
         </div>
         <div class="box_2">
             <div class="title">
-                @foreach($product_one as $item)
-
-                    <div class="info_product">
-                        <h1>{{$item->name}}</h1>
-                        <div class="em">
-                            <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$item->star}}</em>
-                            <em><span>91</span>% рекомендують</em>
-                            <em>більше<span> 3000 </span>покупок</em>
-                        </div>
+                <div class="info_product">
+                    <h1>{{$product->name}}</h1>
+                    <div class="em">
+                        <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$item->star}}</em>
+                        <em><span>91</span>% рекомендують</em>
+                        <em>більше<span> 3000 </span>покупок</em>
                     </div>
-                    <div class="container_icon">
-                        <span><i class="fa-regular fa-heart"></i></span>
-                        <span><i class="fa-solid fa-link"></i></span>
-                    </div>
+                </div>
+                <div class="container_icon">
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span><i class="fa-solid fa-link"></i></span>
+                </div>
             </div>
             <div class="price">
                 <div class="container_price">
-{{--                    <h2>від 140 грн <span class="sale_price">237 грн</span></h2>--}}
-                    <h2>від {{$item->price}} грн <span class="sale_price">{{$item->price_sale}} грн</span></h2>
-                    <p><span class="sale_day">3 дні</span> Sale 🔥</p>
+                    {{--                    <h2>від 140 грн <span class="sale_price">237 грн</span></h2>--}}
+                    <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>
+                    @if(true)
+                        <p><span class="sale_day"> дні</span> Sale 🔥</p>
+                    @endif
+
                 </div>
                 <div class="container_buyer">
                     <p class="black">В кошик</p>
@@ -254,8 +255,6 @@
                     протягом 14 днів.</p>
             </div>
         </div>
-        @endforeach
-    </div>
     </div>
     <div class="other_product">
         <h3>Схожі товари</h3>

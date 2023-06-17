@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\ImgComment;
 use App\Models\Product;
 use App\Models\UserComent;
+use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -86,17 +87,17 @@ class ProfileController extends Controller
         $product = Product::where("id", $product_id)->first();
         $this->find_category_list($product->category);
         $products_all = Product::limit(14)->get();
-        $product_one = Product::limit(1)->get();
-        $profile = UserComent::orderBy(DB::raw('RAND()'))->get();
+        $comments = UserComent::where("product_id", $product_id)->get();
         $img_comments = ImgComment::all();
-
-//        dd($profile);
+//        $end_sale = Carbon::parse('2025-06-09 08:20:00');
+        $data_now = Carbon::now();
+        dd(Carbon::parse($product->end_sale)->diff(Carbon::now())->format('%d'));
         return view("profile.product_joom")
-            ->with("product_one", $product_one)
-            ->with("products", $product)
+            ->with("data_now", $data_now)
+            ->with("product", $product)
             ->with("category_link", $this->category_info)
             ->with("products_all", $products_all)
-            ->with("profile", $profile)
+            ->with("comments", $comments)
             ->with("img_comments", $img_comments)
             ;
     }
