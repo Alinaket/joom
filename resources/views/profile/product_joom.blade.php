@@ -136,7 +136,8 @@
             </div>
             <div class="price">
                 <div class="container_price">
-                    <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>
+                    <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span>
+                    </h2>
                     @if(true)
                         <p><span class="sale_day"> дні</span> Sale 🔥</p>
                     @endif
@@ -181,39 +182,9 @@
             <div class="size_product">
                 <h3>Розмір<span></span></h3>
                 <ul>
-                    @foreach($item as $fonts)
+                    @foreach( $fonts as $item)
                         <li>{{$item->font}}</li>
                     @endforeach
-
-{{--                    <li>Huawei Mate 30 Lite</li>--}}
-{{--                    <li>Huawei Mate 30 PRO</li>--}}
-{{--                    <li>Huawei P20</li>--}}
-{{--                    <li>Huawei P20 Lite</li>--}}
-{{--                    <li>Huawei P20 PRO</li>--}}
-{{--                    <li>Huawei P30</li>--}}
-{{--                    <li>Huawei P30 Lite</li>--}}
-{{--                    <li>Huawei P30 PRO</li>--}}
-{{--                    <li>Huawei P40</li>--}}
-{{--                    <li>Huawei P40 Lite 4G</li>--}}
-{{--                    <li>Huawei P40 Lite 5G</li>--}}
-{{--                    <li>Huawei P40 PRO</li>--}}
-{{--                    <li>Huawei P Smart 2019</li>--}}
-{{--                    <li>Huawei P Smart 2020</li>--}}
-{{--                    <li>Huawei P Smart 2021</li>--}}
-{{--                    <li>iPhone 6 / 6S</li>--}}
-{{--                    <li>iPhone 6 Plus / 6S Plus</li>--}}
-{{--                    <li>iPhone SE 2020</li>--}}
-{{--                    <li>iPhone 7 / 8</li>--}}
-{{--                    <li>iPhone 7 Plus / 8 Plus</li>--}}
-{{--                    <li>iPhone X / XS</li>--}}
-{{--                    <li>iPhone XR</li>--}}
-{{--                    <li>iPhone XS MAX</li>--}}
-{{--                    <li>iPhone 11</li>--}}
-{{--                    <li>iPhone 11 PRO</li>--}}
-{{--                    <li>iPhone 11 PRO MAX</li>--}}
-{{--                    <li>iPhone 12</li>--}}
-{{--                    <li>iPhone 12 Mini</li>--}}
-{{--                    <li>iPhone 12 PRO</li>--}}
                 </ul>
             </div>
             <div class="shop">
@@ -264,9 +235,9 @@
                 <div class="card">
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
-                                                <div class="sale_time">
-                                                    <p>Sale 🔥 <span>24:44:17</span></p>
-                                                </div>
+                        {{--                                                <div class="sale_time">--}}
+                        {{--                                                    <p>Sale 🔥 <span>24:44:17</span></p>--}}
+                        {{--                                                </div>--}}
                     </div>
                     <div class="text">
                         <div class="sale">

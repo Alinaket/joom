@@ -90,7 +90,7 @@ class ProfileController extends Controller
         $products_all = Product::limit(14)->get();
         $comments = UserComent::where("product_id", $product_id)->get();
         $img_comments = ImgComment::all();
-        $fonts = Font::where()->get();
+        $fonts = Font::where("id_font", $product_id)->get();
 //        $end_sale = Carbon::parse('2025-06-09 08:20:00');
         $data_now = Carbon::now();
 //        dd(Carbon::parse($product->end_sale)->diff(Carbon::now())->format('%d'));
