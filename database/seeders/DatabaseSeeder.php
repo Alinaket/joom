@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             UserComentsSeeder::class,
             ImgCommentSeeder::class,
             FontSeeder::class,
+            ColorSeeder::class,
         ]);
     }
 }

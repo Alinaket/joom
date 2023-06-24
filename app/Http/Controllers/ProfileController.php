@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Category;
+use App\Models\Color;
 use App\Models\Font;
 use App\Models\ImgComment;
 use App\Models\Product;
@@ -91,12 +92,14 @@ class ProfileController extends Controller
         $comments = UserComent::where("product_id", $product_id)->get();
         $img_comments = ImgComment::all();
         $fonts = Font::where("id_font", $product_id)->get();
+        $color = Color::where("color_id", $product_id)->get();
 //        $end_sale = Carbon::parse('2025-06-09 08:20:00');
         $data_now = Carbon::now();
 //        dd(Carbon::parse($product->end_sale)->diff(Carbon::now())->format('%d'));
 //        dd(2);
         return view("profile.product_joom")
 //            ->with("data_now", $data_now)
+            ->with("color", $color)
             ->with("product", $product)
             ->with("category_link", $this->category_info)
             ->with("products_all", $products_all)

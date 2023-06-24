@@ -331,8 +331,11 @@
     flex-wrap: wrap;
     grid-gap: 0 10px;
     margin-bottom: 32px;
-}
 
+}
+.box_2 .color_product li{
+    margin: 5px 0;
+}
 .box_2 .color_product li img {
     height: 46px;
     width: 46px;
@@ -352,6 +355,8 @@
     border-radius: 25px;
     padding: 15px 20px;
     background: #f2f3f7;
+    display: flex;
+    justify-content: space-around;
 }
 
 .box_2 .shop img {

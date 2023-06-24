@@ -14,9 +14,8 @@
         <div class="box_1">
             <div class="all_img_product">
                 <div class="list_img">
-                    <div class="img img_border">
-                        <img src="https://img.joomcdn.net/f878344af4957e897ffd1f4ea3899449d800b904_original.jpeg"
-                             alt="">
+                    <div class="img">
+                        <img src="https://img.joomcdn.net/9718ca91c6e258d2890e1e645c9a763572220040_100_100.jpeg" alt="">
                     </div>
                     <div class="img">
                         <img src="https://img.joomcdn.net/9718ca91c6e258d2890e1e645c9a763572220040_100_100.jpeg" alt="">
@@ -160,24 +159,16 @@
             </div>
             <div class="color_product">
                 <h3>Колір</h3>
-                <ul>
-                    <li><img
-                            src="https://celes.club/uploads/posts/2022-11/1667276263_1-celes-club-p-temno-serii-fon-oboi-instagram-1.jpg"
-                            alt=""></li>
-                    <li><img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy92k8i8BqjpzusUTBH-yGILktHibRysr3BXa5bScX_WNAQgQljum8GIrlpL5HOuO3v1g&usqp=CAU"
-                            alt=""></li>
-                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Color-blue.JPG" alt=""></li>
-                    <li><img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Libya_%281977%E2%80%932011%29.svg/300px-Flag_of_Libya_%281977%E2%80%932011%29.svg.png"
-                            alt=""></li>
-                    <li><img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Purple_website.svg/1200px-Purple_website.svg.png"
-                            alt=""></li>
-                    <li><img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2048px-Solid_white.svg.png"
-                            alt=""></li>
-                </ul>
+                    <ul>
+                        @foreach($color as $item)
+                        <li>
+                            <div class="img img_border">
+                                <img src="{{$item->color}}"
+                                     alt="">
+                            </div>
+                        </li>
+                        @endforeach
+                    </ul>
             </div>
             <div class="size_product">
                 <h3>Розмір<span></span></h3>
