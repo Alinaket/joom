@@ -137,8 +137,8 @@
                 <div class="container_price">
                     <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span>
                     </h2>
-                    @if(true)
-                        <p><span class="sale_day"> дні</span> Sale 🔥</p>
+                    @if($count_sale)
+                        <p><span class="sale_day">{{$count_sale}}</span> Sale 🔥</p>
                     @endif
 
                 </div>
@@ -157,27 +157,31 @@
                     </div>
                 </div>
             </div>
-            <div class="color_product">
-                <h3>Колір</h3>
+            @if(count($color))
+                <div class="color_product">
+                    <h3>Колір</h3>
                     <ul>
                         @foreach($color as $item)
-                        <li>
-                            <div class="img img_border">
-                                <img src="{{$item->color}}"
-                                     alt="">
-                            </div>
-                        </li>
+                            <li>
+                                <div class="img img_border">
+                                    <img src="{{$item->color}}"
+                                         alt="">
+                                </div>
+                            </li>
                         @endforeach
                     </ul>
-            </div>
-            <div class="size_product">
-                <h3>Розмір<span></span></h3>
-                <ul>
-                    @foreach( $fonts as $item)
-                        <li>{{$item->font}}</li>
-                    @endforeach
-                </ul>
-            </div>
+                </div>
+            @endif
+            @if(count($fonts))
+                <div class="size_product">
+                    <h3>Розмір<span></span></h3>
+                    <ul>
+                        @foreach( $fonts as $item)
+                            <li>{{$item->font}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="shop">
                 <div class="shop_info">
                     <div class="img">

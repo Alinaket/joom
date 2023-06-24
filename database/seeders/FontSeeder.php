@@ -48,7 +48,19 @@ class FontSeeder extends Seeder
             ['id_font'=>7, 'font'=>"XL"],
             ['id_font'=>7, 'font'=>"XXL"],
             ['id_font'=>7, 'font'=>"XXXL"],
-            ['id_font'=>7, 'font'=>""],
+            ['id_font'=>11, 'font'=>"2"],
+            ['id_font'=>11, 'font'=>"3"],
+            ['id_font'=>11, 'font'=>"4"],
+            ['id_font'=>21, 'font'=>"M"],
+            ['id_font'=>21, 'font'=>"L"],
+            ['id_font'=>21, 'font'=>"XL"],
+            ['id_font'=>21, 'font'=>"XXL"],
+            ['id_font'=>21, 'font'=>"XXXL"],
+            ['id_font'=>21, 'font'=>"XXXXL"],
+            ['id_font'=>21, 'font'=>"XXXXXL"],
+            ['id_font'=>21, 'font'=>"6XL"],
+            ['id_font'=>21, 'font'=>"7XL"],
+            ['id_font'=>21, 'font'=>"8XL"],
 
         ]);
     }

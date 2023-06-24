@@ -69,7 +69,7 @@
                         <div class="img">
                             <img src="{{$item->img}}" alt="">
                             <div class="sale_time">
-                                <p>Sale 🔥 <span>24:44:17</span></p>
+{{--                                <p>Sale 🔥 <span>24:44:17</span></p>--}}
                             </div>
                         </div>
                         <div class="text">
@@ -80,7 +80,7 @@
                                 <p><span>{{$item->price}}</span>грн</p>
                                 <em><span>{{$item->sale_price}}</span>грн</em>
                             </div>
-                            <em>Хід продажів</em>
+{{--                            <em>Хід продажів</em>--}}
                             <div class="marks">
                                 <span><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star"></i></span>
@@ -159,7 +159,7 @@
                             <div class="img">
                                 <img src="{{$item->img}}" alt="">
                                 <div class="sale_time">
-                                    <p>Sale 🔥 <span>24:44:17</span></p>
+{{--                                    <p>Sale 🔥 <span>24:44:17</span></p>--}}
                                 </div>
                             </div>
                             <div class="text">
@@ -170,7 +170,7 @@
                                     <p><span>{{$item->price}}</span>грн</p>
                                     <em><span>{{$item->sale_price}}</span>грн</em>
                                 </div>
-                                <em>Хід продажів</em>
+{{--                                <em>Хід продажів</em>--}}
                                 <div class="marks">
                                     <span><i class="fa-solid fa-star"></i></span>
                                     <span><i class="fa-solid fa-star"></i></span>
@@ -242,7 +242,7 @@
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
                         <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
+{{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
                         </div>
                     </div>
                     <div class="text">
@@ -253,7 +253,7 @@
                             <p><span>{{$item->price}}</span>грн</p>
                             <em><span>{{$item->sale_price}}</span>грн</em>
                         </div>
-                        <em>Хід продажів</em>
+{{--                        <em>Хід продажів</em>--}}
                         <div class="marks">
                             <span><i class="fa-solid fa-star"></i></span>
                             <span><i class="fa-solid fa-star"></i></span>
@@ -319,7 +319,7 @@
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
                         <div class="sale_time">
-                            <p>Sale 🔥 <span>24:44:17</span></p>
+{{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
                         </div>
                     </div>
                     <div class="text">
@@ -330,7 +330,7 @@
                             <p><span>{{$item->price}}</span>грн</p>
                             <em><span>{{$item->sale_price}}</span>грн</em>
                         </div>
-                        <em>Хід продажів</em>
+{{--                        <em>Хід продажів</em>--}}
                         <div class="marks">
                             <span><i class="fa-solid fa-star"></i></span>
                             <span><i class="fa-solid fa-star"></i></span>

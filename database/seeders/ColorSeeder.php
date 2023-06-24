@@ -41,7 +41,16 @@ class ColorSeeder extends Seeder
             ['color_id'=>7, 'color'=>"https://img.joomcdn.net/8dff12629b6a37981b721808c895b77b39d89bde_original.jpeg"],
             ['color_id'=>7, 'color'=>"https://img.joomcdn.net/3b65ab4d8db62fa75ad99bf0d92b6c8e292a5db5_original.jpeg"],
             ['color_id'=>7, 'color'=>"https://img.joomcdn.net/1a1b92e2ad07ea771bc6f7a1f6e18a8ed7f975d8_original.jpeg"],
-            ['color_id'=>7, 'color'=>""],
+            ['color_id'=>11, 'color'=>"https://img.joomcdn.net/9ee41c925b4a44058d8871a4cb4a0c98d7e8a1a9_original.jpeg"],
+            ['color_id'=>11, 'color'=>"https://img.joomcdn.net/150cdf91a7a2ab8f62a7c0f5a0d18fb40f4471d1_original.jpeg"],
+            ['color_id'=>11, 'color'=>"https://img.joomcdn.net/12f9cadb36a0b8e8e347be7b7699c3dafaaa5283_original.jpeg"],
+            ['color_id'=>21, 'color'=>"https://img.joomcdn.net/57c1abe227f82568c2e354ef2894ab889291e5c2_original.jpeg"],
+            ['color_id'=>21, 'color'=>"https://img.joomcdn.net/87cb92b16e4425875b185bb6a72ac9f0c51a743c_original.jpeg"],
+            ['color_id'=>21, 'color'=>"https://img.joomcdn.net/684b9ea0d8f0b2c51384783ca97db10a6f8878e8_original.jpeg"],
+            ['color_id'=>2, 'color'=>"https://img.joomcdn.net/17a896b2f265dcc7ed30ee81bd6b083470358fab_original.jpeg"],
+            ['color_id'=>2, 'color'=>"https://img.joomcdn.net/ba7fdcede8b7f46528c303855d2ffb24e478b669_original.jpeg"],
+            ['color_id'=>2, 'color'=>"https://img.joomcdn.net/6828745b5055032bd99e5d074ec3f1ce37664dbb_original.jpeg"],
+//            ['color_id'=>2, 'color'=>""],
         ]);
     }
 }

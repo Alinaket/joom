@@ -288,6 +288,7 @@ h2{
     color: #2d2f43;
     font-size: 12px;
     margin-top: 8px;
+    line-height: 16px;
 }
 .cardList_all .discript p{
     max-height: 3em;
