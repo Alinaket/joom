@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             ImgCommentSeeder::class,
             FontSeeder::class,
             ColorSeeder::class,
+            GallerySeeder::class,
         ]);
     }
 }

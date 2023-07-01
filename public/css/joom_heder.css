@@ -497,5 +497,12 @@ h2{
     font-size: 40px;
     font-weight: 600;
     padding-bottom: 2px;
-
+}
+.arrow_gallery{
+    font-size: 10px;
+    padding: 5px 10px;
+    background: #f7f8fa;
+    color: #8e90a7;
+    border-radius: 7px;
+    text-align: center;
 }

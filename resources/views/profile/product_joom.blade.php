@@ -14,26 +14,16 @@
         <div class="box_1">
             <div class="all_img_product">
                 <div class="list_img">
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/9718ca91c6e258d2890e1e645c9a763572220040_100_100.jpeg" alt="">
-                    </div>
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/9718ca91c6e258d2890e1e645c9a763572220040_100_100.jpeg" alt="">
-                    </div>
-                    <div class="img">
-                        <img src="https://img.joomcdn.net/e7d8d3e6765e3d9e1905d16daee2d53e6fcd05da_100_100.jpeg" alt="">
-                    </div>
-                    <div class="img">
-                        <img src="	https://img.joomcdn.net/0e78713201fa14b87f8426a876c0e3ce97db6c57_original.jpeg"
-                             alt="">
-                    </div>
-                    <div class="img">
-                        <img src="	https://img.joomcdn.net/332ac0c26f43d61599bd49eb15132788dc7c4965_original.jpeg"
-                             alt="">
-                    </div>
-                    <div class="img">
-                        <img src="	https://img.joomcdn.net/39e717afa464f6a39785334e576f6dc6e35716b6_100_100.jpeg"
-                             alt="">
+                    <div class="arrow_gallery gallery_top">
+                    <span><i class="fa-solid fa-chevron-up"></i></span>
+                </div>
+                    @foreach($gallery as $item)
+                        <div class="img">
+                            <img src="{{$item->img}}" alt="">
+                        </div>
+                    @endforeach
+                    <div class="arrow_gallery gallery_down">
+                        <span><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                 </div>
                 <div class="title_img">

@@ -6,6 +6,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Category;
 use App\Models\Color;
 use App\Models\Font;
+use App\Models\Gallery;
 use App\Models\ImgComment;
 use App\Models\Product;
 use App\Models\UserComent;
@@ -86,6 +87,7 @@ class ProfileController extends Controller
     public function product_joom(Request $request)
     {
         $product_id = $request->input("product_id");
+        $gallery = Gallery::limit(6)->get();
 //        dd($product_id);
         $product = Product::where("id", $product_id)->first();
         $this->find_category_list($product->category);
@@ -99,6 +101,7 @@ class ProfileController extends Controller
 //        dd(Carbon::parse($product->end_sale)->diff(Carbon::now()));
 //        dd(2);
         return view("profile.product_joom")
+            ->with("gallery", $gallery)
             ->with("count_sale", $count_sale)
             ->with("color", $color)
             ->with("product", $product)
@@ -108,6 +111,7 @@ class ProfileController extends Controller
             ->with("img_comments", $img_comments)
             ->with("fonts", $fonts);
     }
+
     private function check_data($product)
     {
         $end_sale = Carbon::parse($product->end_sale);
@@ -130,10 +134,12 @@ class ProfileController extends Controller
 
         return $count_sale;
     }
-    private function month($count ){
-        if($count == 1){
-             return "місяць";
-        }elseif($count > 1){
+
+    private function month($count)
+    {
+        if ($count == 1) {
+            return "місяць";
+        } elseif ($count > 1) {
             return "місяці";
         }
     }

@@ -32,6 +32,7 @@
     object-fit: cover;
     border-radius: 10px;
     margin: 0 14px 12px 0;
+
 }
 
 .box_1 .all_img_product .img_border img {
@@ -144,6 +145,7 @@
 .box_1 .comments .response {
     padding-left: 40px;
     font-size: 14px;
+    line-height: 18px;
 }
 
 .box_1 .comments .img_products {
