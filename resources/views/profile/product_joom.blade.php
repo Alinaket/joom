@@ -13,15 +13,19 @@
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">
-                <div class="list_img">
-                    <div class="arrow_gallery gallery_top">
-                    <span><i class="fa-solid fa-chevron-up"></i></span>
-                </div>
-                    @foreach($gallery as $item)
-                        <div class="img">
-                            <img src="{{$item->img}}" alt="">
+                <div class="mini_img">
+                    <div class="arrow_gallery gallery_top" onclick="scroll_button(0)">
+                        <span><i class="fa-solid fa-chevron-up"></i></span>
+                    </div>
+                    <div class="list_wrapper">
+                        <div class="list_img">
+                            @foreach($gallery as $item)
+                                <div class="img">
+                                    <img src="{{$item->img}}" alt="">
+                                </div>
+                            @endforeach
                         </div>
-                    @endforeach
+                    </div>
                     <div class="arrow_gallery gallery_down">
                         <span><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
@@ -280,6 +284,9 @@
             </li>
         </ul>
     </div>
+@stop
+@section("script")
+    <script src="{{asset("js/img_product.js")}}"></script>
 @stop
 
 

@@ -134,5 +134,6 @@
     </div>
 </div>
 <script src="https://kit.fontawesome.com/1e05c9e939.js" crossorigin="anonymous"></script>
+@yield("script")
 </body>
 </html>

@@ -87,7 +87,7 @@ class ProfileController extends Controller
     public function product_joom(Request $request)
     {
         $product_id = $request->input("product_id");
-        $gallery = Gallery::limit(6)->get();
+        $gallery = Gallery::get();
 //        dd($product_id);
         $product = Product::where("id", $product_id)->first();
         $this->find_category_list($product->category);

@@ -172,3 +172,10 @@ html {
   [hidden] {
     display: none;
   }
+  .img{
+      object-fit: cover;
+  }
+.img img{
+    height: 100%;
+    width: 100%;
+}
