@@ -221,12 +221,10 @@
         <h3>Схожі товари</h3>
         <div class="cardList cardList_all">
             @foreach($products_all as $item)
-                <div class="card">
+                <a class="card" href="{{route("profile.product_joom", ["product_id"=>$item->id])}}">
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
-                        {{--                                                <div class="sale_time">--}}
-                        {{--                                                    <p>Sale 🔥 <span>24:44:17</span></p>--}}
-                        {{--                                                </div>--}}
+
                     </div>
                     <div class="text">
                         <div class="sale">
@@ -236,7 +234,7 @@
                             <p><span>{{$item->price}}</span>грн</p>
                             <em><span>{{$item->sale_price}}</span>грн</em>
                         </div>
-                        <em>Хід продажів</em>
+                        {{--                            <em>Хід продажів</em>--}}
                         <div class="marks">
                             <span><i class="fa-solid fa-star"></i></span>
                             <span><i class="fa-solid fa-star"></i></span>
@@ -248,7 +246,7 @@
                             <p>{{$item->name}}</p>
                         </div>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
         <div class="button_see">
