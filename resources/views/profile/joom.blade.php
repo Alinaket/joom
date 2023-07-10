@@ -68,9 +68,6 @@
                     <a class="card" href="{{route("profile.product_joom", ["product_id"=>$item->id])}}">
                         <div class="img">
                             <img src="{{$item->img}}" alt="">
-                            <div class="sale_time">
-{{--                                <p>Sale 🔥 <span>24:44:17</span></p>--}}
-                            </div>
                         </div>
                         <div class="text">
                             <div class="sale">
@@ -101,9 +98,6 @@
         <div class="title">
             <h2>Акція тижня</h2>
         </div>
-        <div class="arrow arrow_left_action">
-            <span><i class="fa-solid fa-circle-chevron-left"></i></span>
-        </div>
         <div class="cardList cardList_banner">
             <div class="card yellow">
                 <div class="text">
@@ -133,9 +127,6 @@
                 </div>
             </div>
         </div>
-        <div class="arrow arrow_right_action">
-            <span><i class="fa-solid fa-circle-chevron-right"></i></span>
-        </div>
     </div>
     <div class="info_sale">
         <div class="box">
@@ -155,12 +146,9 @@
                 </div>
                 <div class="cardList cardList_all">
                     @foreach($interesting as $item)
-                        <div class="card">
+                        <a class="card" href="{{route("profile.product_joom", ["product_id"=>$item->id])}}">
                             <div class="img">
                                 <img src="{{$item->img}}" alt="">
-                                <div class="sale_time">
-{{--                                    <p>Sale 🔥 <span>24:44:17</span></p>--}}
-                                </div>
                             </div>
                             <div class="text">
                                 <div class="sale">
@@ -170,7 +158,7 @@
                                     <p><span>{{$item->price}}</span>грн</p>
                                     <em><span>{{$item->sale_price}}</span>грн</em>
                                 </div>
-{{--                                <em>Хід продажів</em>--}}
+                                {{--                            <em>Хід продажів</em>--}}
                                 <div class="marks">
                                     <span><i class="fa-solid fa-star"></i></span>
                                     <span><i class="fa-solid fa-star"></i></span>
@@ -182,15 +170,12 @@
                                     <p>{{$item->name}}</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     @endforeach
                 </div>
             </div>
         </div>
         <div class="container_banners">
-            <div class="arrow arrow_left_action">
-                <span><i class="fa-solid fa-circle-chevron-left"></i></span>
-            </div>
             <div class="cardList cardList_banner">
                 <div class="card red">
                     <div class="text">
@@ -226,9 +211,6 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow arrow_right_action">
-                <span><i class="fa-solid fa-circle-chevron-right"></i></span>
-            </div>
         </div>
     </div>
     <div class="health">
@@ -237,13 +219,10 @@
             <a href="#"><p>Усі товари <span><i class="fa-solid fa-chevron-right"></i></span></p></a>
         </div>
         <div class="cardList cardList_all">
-            @foreach($product_cat as $item)
-                <div class="card">
+            @foreach($products as $item)
+                <a class="card" href="{{route("profile.product_joom", ["product_id"=>$item->id])}}">
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
-                        <div class="sale_time">
-{{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
-                        </div>
                     </div>
                     <div class="text">
                         <div class="sale">
@@ -253,7 +232,7 @@
                             <p><span>{{$item->price}}</span>грн</p>
                             <em><span>{{$item->sale_price}}</span>грн</em>
                         </div>
-{{--                        <em>Хід продажів</em>--}}
+                        {{--                            <em>Хід продажів</em>--}}
                         <div class="marks">
                             <span><i class="fa-solid fa-star"></i></span>
                             <span><i class="fa-solid fa-star"></i></span>
@@ -265,16 +244,13 @@
                             <p>{{$item->name}}</p>
                         </div>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
     </div>
     <div class="banners_country">
         <div class="title">
             <h2>Товари з різних країн</h2>
-        </div>
-        <div class="arrow arrow_left_banner">
-            <span><i class="fa-solid fa-circle-chevron-left"></i></span>
         </div>
         <div class="cardList cardList_banner">
             <div class="card">
@@ -305,9 +281,6 @@
                 </div>
             </div>
         </div>
-        <div class="arrow arrow_right">
-            <span><i class="fa-solid fa-circle-chevron-right"></i></span>
-        </div>
     </div>
     <div class="for_you">
         <div class="title">
@@ -315,12 +288,9 @@
         </div>
         <div class="cardList cardList_all">
             @foreach($products_all as $item)
-                <div class="card">
+                <a class="card" href="{{route("profile.product_joom", ["product_id"=>$item->id])}}">
                     <div class="img">
                         <img src="{{$item->img}}" alt="">
-                        <div class="sale_time">
-{{--                            <p>Sale 🔥 <span>24:44:17</span></p>--}}
-                        </div>
                     </div>
                     <div class="text">
                         <div class="sale">
@@ -330,7 +300,7 @@
                             <p><span>{{$item->price}}</span>грн</p>
                             <em><span>{{$item->sale_price}}</span>грн</em>
                         </div>
-{{--                        <em>Хід продажів</em>--}}
+                        {{--                            <em>Хід продажів</em>--}}
                         <div class="marks">
                             <span><i class="fa-solid fa-star"></i></span>
                             <span><i class="fa-solid fa-star"></i></span>
@@ -342,7 +312,7 @@
                             <p>{{$item->name}}</p>
                         </div>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
         <div class="button_see">

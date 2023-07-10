@@ -9,29 +9,29 @@
             <a href="">{{$item->name}}</a>
         @endforeach
     </div>
-    <div class="header_top">
-        <div class="container_header">
-            <div class="img">
-                <img src="https://img.joomcdn.net/9ee41c925b4a44058d8871a4cb4a0c98d7e8a1a9_original.jpeg" alt="">
-                <div class="info_header">
-                    <h4>Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>
-                    <div class="em">
-                        <em class="red"><span><i class="fa-solid fa-star"></i></span> 4,7</em>
-                        <em>91% <span>рекомендують</span></em>
-                        <em>30000 <span>покупок</span></em>
-                    </div>
-                </div>
-            </div>
-            <div class="price">
-                <h2>від <span>164</span> грн</h2>
-                <span class="sale_price">449 грн</span>
-                <div class="container_buyer">
-                    <p class="black">В кошик</p>
-                    <p>Придбати зараз</p>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="header_top">--}}
+{{--        <div class="container_header">--}}
+{{--            <div class="img">--}}
+{{--                <img src="{{$product->img}}" alt="">--}}
+{{--                <div class="info_header">--}}
+{{--                    <h4>{{$product->name}}Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>--}}
+{{--                    <div class="em">--}}
+{{--                        <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$product->star}}</em>--}}
+{{--                        <em>91% <span>рекомендують</span></em>--}}
+{{--                        <em>30000 <span>покупок</span></em>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="price">--}}
+{{--                <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>--}}
+{{--               --}}
+{{--                <div class="container_buyer">--}}
+{{--                    <p class="black">В кошик</p>--}}
+{{--                    <p>Придбати зараз</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">

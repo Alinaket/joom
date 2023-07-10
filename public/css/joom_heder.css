@@ -188,7 +188,7 @@ img{
     height: 248px;
     position: relative;
 }
-.content .banner .arrow, .arrow{
+.content .banner .arrow{
     font-size: 40px;
     color: white;
     position: absolute;
@@ -346,20 +346,7 @@ h2{
     background: #fbcee3;
     color: white;
 }
-.action_week .arrow_left_action{
-    top: 600px;
-    left: 318px;
-    position: absolute;
-    background: #2d2f43;
-}
-.action_week .arrow_left_action span{
-    right: 318px;
-    top: 600px;
-    position: absolute;
-}
-.action_week .arrow_left_action{
-    background: #2d2f43;
-}
+
 .info_sale .box{
     display: grid;
     grid-template-columns: 1fr 1fr;
