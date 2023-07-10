@@ -9,46 +9,46 @@
             <a href="">{{$item->name}}</a>
         @endforeach
     </div>
-{{--    <div class="header_top">--}}
-{{--        <div class="container_header">--}}
-{{--            <div class="img">--}}
-{{--                <img src="{{$product->img}}" alt="">--}}
-{{--                <div class="info_header">--}}
-{{--                    <h4>{{$product->name}}Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>--}}
-{{--                    <div class="em">--}}
-{{--                        <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$product->star}}</em>--}}
-{{--                        <em>91% <span>рекомендують</span></em>--}}
-{{--                        <em>30000 <span>покупок</span></em>--}}
+{{--        <div class="header_top">--}}
+{{--            <div class="container_header">--}}
+{{--                <div class="img">--}}
+{{--                    <img src="{{$product->img}}" alt="">--}}
+{{--                    <div class="info_header">--}}
+{{--                        <h4>{{$product->name}}Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>--}}
+{{--                        <div class="em">--}}
+{{--                            <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$product->star}}</em>--}}
+{{--                            <em>91% <span>рекомендують</span></em>--}}
+{{--                            <em>30000 <span>покупок</span></em>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="price">--}}
+{{--                    <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>--}}
+
+{{--                    <div class="container_buyer">--}}
+{{--                        <p class="black">В кошик</p>--}}
+{{--                        <p>Придбати зараз</p>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--            </div>--}}
-{{--            <div class="price">--}}
-{{--                <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>--}}
-{{--               --}}
-{{--                <div class="container_buyer">--}}
-{{--                    <p class="black">В кошик</p>--}}
-{{--                    <p>Придбати зараз</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
 {{--        </div>--}}
-{{--    </div>--}}
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">
                 <div class="mini_img">
-                    <div class="arrow_gallery gallery_top" onclick="scroll_button(0)">
+                    <div class="arrow_gallery gallery_top" onclick="scroll_button(-1)">
                         <span><i class="fa-solid fa-chevron-up"></i></span>
                     </div>
                     <div class="list_wrapper">
                         <div class="list_img">
                             @foreach($gallery as $item)
                                 <div class="img">
-                                    <img src="{{$item->img}}" alt="">
+                                    <img onclick="change_big_img(this)" src="{{$item->img}}" alt="">
                                 </div>
                             @endforeach
                         </div>
                     </div>
-                    <div class="arrow_gallery gallery_down">
+                    <div class="arrow_gallery gallery_down" onclick="scroll_button(1)">
                         <span><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                 </div>
@@ -193,7 +193,11 @@
                     <h3>Розмір<span></span></h3>
                     <ul>
                         @foreach( $fonts as $item)
-                            <li>{{$item->font}}</li>
+                            <li>
+                                <div class="bg">
+                                </div>
+                                <em>{{$item->font}}</em>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
@@ -220,11 +224,18 @@
             <div class="info_shop">
                 <h3>Опис</h3>
                 <ul>
-                    <li>Тип : Бампер</li>
-                    <li>Дизайн : Рівнина..</li>
+                    <li>Тип : 100% новий і високу якість</li>
+                    <li>Матеріал: Пластик, скло, гумка</li>
+                    <li>Колір: як показано</li>
+                    <li>Необхідний аксесуар для гардеробу Стімпанка</li>
+                    <li>Поставляється з гумкою для пефект-примірки,а петельки з боків приносять фантастичний вигляд.
+                        Каркас з високоякісного пластику з твердим покриттям,що створює вінтажне відчуття.</li>
+                    <li>Кількість: 1 ПК</li>
+                    <li>Примітка: Через різницю між іншими моніторами, зображення не обов'язково відображають фактичні кольору елемент. Дякую!</li>
+                    <li>Пакет включає в себе: 1 х Вінтажний стиль стімпанк окуляри зварювання панк готичні окуляри Косплей</li>
                 </ul>
                 <div class="all_description">
-                    <em class="red_em">Подивитись повний опис</em>
+                    <em class="red_em" onclick="open_description()">Подивитись повний опис</em>
                     <em class="underline">Знайшли неточність?</em>
                 </div>
             </div>
