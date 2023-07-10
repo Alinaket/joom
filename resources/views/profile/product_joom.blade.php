@@ -9,7 +9,29 @@
             <a href="">{{$item->name}}</a>
         @endforeach
     </div>
-
+    <div class="header_top">
+        <div class="container_header">
+            <div class="img">
+                <img src="https://img.joomcdn.net/9ee41c925b4a44058d8871a4cb4a0c98d7e8a1a9_original.jpeg" alt="">
+                <div class="info_header">
+                    <h4>Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>
+                    <div class="em">
+                        <em class="red"><span><i class="fa-solid fa-star"></i></span> 4,7</em>
+                        <em>91% <span>рекомендують</span></em>
+                        <em>30000 <span>покупок</span></em>
+                    </div>
+                </div>
+            </div>
+            <div class="price">
+                <h2>від <span>164</span> грн</h2>
+                <span class="sale_price">449 грн</span>
+                <div class="container_buyer">
+                    <p class="black">В кошик</p>
+                    <p>Придбати зараз</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">
@@ -182,7 +204,7 @@
                         <img src="https://avatars.joomcdn.net/b7423bf07ad556d1a9561acad8d28b955e2d199b_original.jpeg"
                              alt="">
                     </div>
-                    <div class="text">
+                    <div class="text text_shop">
                         <h4>honglilai</h4>
                         <div class="text">
                             <em><span class="red_star"><i class="fa-solid fa-star"></i></span>4,6 / 9 000+</em>
@@ -203,7 +225,7 @@
                 </ul>
                 <div class="all_description">
                     <em class="red_em">Подивитись повний опис</em>
-                    <em>Знайшли неточність?</em>
+                    <em class="underline">Знайшли неточність?</em>
                 </div>
             </div>
             <div class="guarantee">
