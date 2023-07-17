@@ -122,7 +122,7 @@
 
 .comments .cardList {
     overflow-y: scroll;
-    max-height: 40vh;
+    height: 40vh;
     /*position: sticky;*/
 }
 
@@ -696,4 +696,7 @@
 .button_see {
     text-align: center;
     padding: 40px 0;
+}
+.info_shop ul .none{
+    display: none;
 }

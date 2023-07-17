@@ -5,7 +5,8 @@ let is_scroll = true
 const list_wrapper = document.querySelector(".all_img_product .list_wrapper")
 const list_wrapper_items = list_wrapper.querySelectorAll(".img")
 const img_title = document.querySelector(".title_img img")
-const all_description = document.querySelector(".all_description .red_em")
+const none = document.querySelector(" ul .none")
+const height = document.querySelector(".comments .cardList")
 
 function scroll_button(coordination) {
     scrolls_img(coordination)
@@ -53,7 +54,17 @@ function change_big_img(img){
     img_title.src = img.src
 }
 function open_description(){
-    all_description.classList.display = "block"
+
+    if(none.style.display === "block"){
+        none.style.display = "none"
+        height.style.height = "40vh"
+
+
+    }else {
+        none.style.display = "block"
+        height.style.height = "50vh"
+
+    }
 }
 
 
