@@ -9,29 +9,29 @@
             <a href="">{{$item->name}}</a>
         @endforeach
     </div>
-{{--        <div class="header_top">--}}
-{{--            <div class="container_header">--}}
-{{--                <div class="img">--}}
-{{--                    <img src="{{$product->img}}" alt="">--}}
-{{--                    <div class="info_header">--}}
-{{--                        <h4>{{$product->name}}Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>--}}
-{{--                        <div class="em">--}}
-{{--                            <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$product->star}}</em>--}}
-{{--                            <em>91% <span>рекомендують</span></em>--}}
-{{--                            <em>30000 <span>покупок</span></em>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="price">--}}
-{{--                    <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>--}}
+    {{--        <div class="header_top">--}}
+    {{--            <div class="container_header">--}}
+    {{--                <div class="img">--}}
+    {{--                    <img src="{{$product->img}}" alt="">--}}
+    {{--                    <div class="info_header">--}}
+    {{--                        <h4>{{$product->name}}Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>--}}
+    {{--                        <div class="em">--}}
+    {{--                            <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$product->star}}</em>--}}
+    {{--                            <em>91% <span>рекомендують</span></em>--}}
+    {{--                            <em>30000 <span>покупок</span></em>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--                <div class="price">--}}
+    {{--                    <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>--}}
 
-{{--                    <div class="container_buyer">--}}
-{{--                        <p class="black">В кошик</p>--}}
-{{--                        <p>Придбати зараз</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
+    {{--                    <div class="container_buyer">--}}
+    {{--                        <p class="black">В кошик</p>--}}
+    {{--                        <p>Придбати зараз</p>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">
@@ -131,7 +131,23 @@
                         @endforeach
                     </div>
                 </div>
-
+                <div class="input">
+                    <form action="{{route("profile.add_comment")}}" method="post">
+                        @csrf
+                        <label>
+                            <input type="text" name="marks">
+                        </label>
+                        <label>
+                            <input type="text" name="name">
+                        </label>
+                        <label>
+                            <input type="text" name="coment">
+                        </label>
+                        <div class="button">
+                            <button>Відправити</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="box_2">
@@ -230,11 +246,17 @@
                         <ul>
                             <li>Колір: як показано</li>
                             <li>Необхідний аксесуар для гардеробу Стімпанка</li>
-                            <li>Поставляється з гумкою для пефект-примірки,а петельки з боків приносять фантастичний вигляд.
-                                Каркас з високоякісного пластику з твердим покриттям,що створює вінтажне відчуття.</li>
+                            <li>Поставляється з гумкою для пефект-примірки,а петельки з боків приносять фантастичний
+                                вигляд.
+                                Каркас з високоякісного пластику з твердим покриттям,що створює вінтажне відчуття.
+                            </li>
                             <li>Кількість: 1 ПК</li>
-                            <li>Примітка: Через різницю між іншими моніторами, зображення не обов'язково відображають фактичні кольору елемент. Дякую!</li>
-                            <li>Пакет включає в себе: 1 х Вінтажний стиль стімпанк окуляри зварювання панк готичні окуляри Косплей</li>
+                            <li>Примітка: Через різницю між іншими моніторами, зображення не обов'язково відображають
+                                фактичні кольору елемент. Дякую!
+                            </li>
+                            <li>Пакет включає в себе: 1 х Вінтажний стиль стімпанк окуляри зварювання панк готичні
+                                окуляри Косплей
+                            </li>
                         </ul>
                     </li>
                 </ul>

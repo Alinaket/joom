@@ -84,6 +84,7 @@ class ProfileController extends Controller
 
     }
 
+
     public function product_joom(Request $request)
     {
         $product_id = $request->input("product_id");
