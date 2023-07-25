@@ -131,17 +131,21 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="input">
+                <div class="comnent_button">
+                    <button onclick="open_comment(this)">Надіслати відгук</button>
+                </div>
+                <div class="input see">
+                    <h3>Ваш відгук <span><i class="fa-solid fa-xmark"></i></span></h3>
                     <form action="{{route("profile.add_comment")}}" method="post">
                         @csrf
-                        <label>
-                            <input type="text" name="marks">
+                        <label class="name">
+                            <input type="text" name="name" placeholder="Ім'я">
                         </label>
-                        <label>
-                            <input type="text" name="name">
+                        <label class="marks">
+                            <input type="text" name="marks" placeholder="Оцінка">
                         </label>
-                        <label>
-                            <input type="text" name="coment">
+                        <label class="comment">
+                            <input type="text" name="coment" placeholder="Коментарій">
                         </label>
                         <div class="button">
                             <button>Відправити</button>

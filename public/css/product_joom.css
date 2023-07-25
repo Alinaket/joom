@@ -1,3 +1,4 @@
+input {outline:none;}
 .link_list a:after {
     content: " / ";
 }
@@ -698,4 +699,63 @@
 }
 .info_shop ul .none{
     display: none;
+}
+.reviews .input {
+    position: fixed;
+    top: 35vh;
+    left: 75vh;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(133, 133, 133, 0.5);
+    border: #2d2f43;
+    z-index: 4;
+    padding: 30px;
+    display: none;
+}
+.reviews .input h3{
+    font-size: 24px;
+    padding-bottom: 30px;
+    color: #b9b9b9;
+    display: flex;
+    justify-content: space-between;
+}
+.reviews .input span{
+    font-size: 18px;
+    font-weight: 200;
+}
+.reviews .input span:hover{
+    color: #ee5151;
+}
+.reviews .input form{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+}
+.reviews .input input{
+    padding: 8px 12px;
+    width: 20em;
+    background: #f5f6f9;
+    border: none;
+    border-radius: 5px;
+}
+.reviews .input input::placeholder{
+    font-size: 14px;
+}
+.reviews .input button,.comnent_button button{
+    color: white;
+    background: #ee5151;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.comnent_button button{
+    background: #f7f8fa;
+    color: #8e90a7;
+    margin-top: 20px;
+}
+.reviews .input button:hover{
+    background: #ef4444;
 }

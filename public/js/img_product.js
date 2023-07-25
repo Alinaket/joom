@@ -7,6 +7,7 @@ const list_wrapper_items = list_wrapper.querySelectorAll(".img")
 const img_title = document.querySelector(".title_img img")
 const none = document.querySelector(" ul .none")
 const height = document.querySelector(".comments .cardList")
+const button_input = document.querySelector(".reviews .see")
 
 function scroll_button(coordination) {
     scrolls_img(coordination)
@@ -20,9 +21,9 @@ function scrolls_img(coordination) {
     console.log(list_wrapper_items.length)
     if (is_scroll) {
         list_wrapper.style.overflow = "hidden"
-        if(temp_scroll > 0 && coordination === -1){
+        if (temp_scroll > 0 && coordination === -1) {
             doSomething(coordination)
-        }else if(coordination === 1 && temp_scroll < list_wrapper_items.length*84 - 84*4){
+        } else if (coordination === 1 && temp_scroll < list_wrapper_items.length * 84 - 84 * 4) {
             doSomething(coordination)
         }
     }
@@ -50,21 +51,28 @@ function doSomething(coordination) {
     }, 1)
 }
 
-function change_big_img(img){
+function change_big_img(img) {
     img_title.src = img.src
 }
-function open_description(){
 
-    if(none.style.display === "block"){
+function open_description() {
+
+    if (none.style.display === "block") {
         none.style.display = "none"
         height.style.height = "40vh"
-
-
-    }else {
+    } else {
         none.style.display = "block"
         height.style.height = "50vh"
-
     }
 }
 
+function open_comment() {
+    console.log(button_input)
+    if (button_input.style.display === "none") {
+        button_input.style.display = "block"
+    } else {
+        button_input.style.display = "none"
+    }
+
+}
 
