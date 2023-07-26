@@ -7,7 +7,7 @@ const list_wrapper_items = list_wrapper.querySelectorAll(".img")
 const img_title = document.querySelector(".title_img img")
 const none = document.querySelector(" ul .none")
 const height = document.querySelector(".comments .cardList")
-const button_input = document.querySelector(".reviews .see")
+const modal_input = document.querySelector(".reviews .modal_input")
 
 function scroll_button(coordination) {
     scrolls_img(coordination)
@@ -67,12 +67,6 @@ function open_description() {
 }
 
 function open_comment() {
-    console.log(button_input)
-    if (button_input.style.display === "none") {
-        button_input.style.display = "block"
-    } else {
-        button_input.style.display = "none"
-    }
-
+    modal_input.classList.toggle("open")
 }
 

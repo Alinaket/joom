@@ -9,9 +9,10 @@ use Illuminate\Http\Request;
 class CommentController extends Controller
 {
     public function add_comment(Request $request){
+//        dd($request->input('id'));
 //        dd($request->input('coment'));
         $comment = new UserComent();
-        $comment->product_id = "11";
+        $comment->product_id = $request->input('id');
         $comment->name = $request->input('name');
         $comment->data = Carbon::now()->format("d M");
         $comment->marks = $request->input('marks');

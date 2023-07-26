@@ -60,6 +60,7 @@
                 <div class="title">
                     <h3>Відгуки<span>1500</span></h3>
                     <div class="marks">
+
                         <ul>
                             <li class="black">Всі</li>
                             <li><span class="margin"><i class="fa-solid fa-image"></i></span>198</li>
@@ -81,7 +82,7 @@
                                 <span><i class="fa-solid fa-star"></i></span> 66
                             </li>
                             <li><span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span> 21
+                                <span><i class="fa-solid fa-star"></i></span>
                             </li>
                             <li>
                                 <span><i class="fa-solid fa-star"></i></span> 61
@@ -134,19 +135,20 @@
                 <div class="comnent_button">
                     <button onclick="open_comment(this)">Надіслати відгук</button>
                 </div>
-                <div class="input see">
-                    <h3>Ваш відгук <span><i class="fa-solid fa-xmark"></i></span></h3>
+                <div class="modal_input">
+                    <h3>Ваш відгук <span onclick="open_comment()"><i class="fa-solid fa-xmark"></i></span></h3>
                     <form action="{{route("profile.add_comment")}}" method="post">
                         @csrf
                         <label class="name">
                             <input type="text" name="name" placeholder="Ім'я">
                         </label>
                         <label class="marks">
-                            <input type="text" name="marks" placeholder="Оцінка">
+                            <input type="number" min="0" max="5" name="marks" placeholder="Оцінка" value="5">
                         </label>
                         <label class="comment">
                             <input type="text" name="coment" placeholder="Коментарій">
                         </label>
+                        <input type="hidden" name="id" value="{{$product->id}}">
                         <div class="button">
                             <button>Відправити</button>
                         </div>

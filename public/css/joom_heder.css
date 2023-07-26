@@ -73,7 +73,7 @@ img{
     border-radius: 10px;
     height: 48px;
 }
-.header .input input{
+.header .modal_input input{
     background: #f5f6f9;
     width: 595px;
     height: 48px;

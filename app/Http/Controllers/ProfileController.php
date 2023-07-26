@@ -98,6 +98,26 @@ class ProfileController extends Controller
         $fonts = Font::where("id_font", $product_id)->get();
         $color = Color::where("color_id", $product_id)->get();
         $count_sale = $this->check_data($product);
+        $count_star1 = 0;
+        $count_star2 = 0;
+        $count_star3 = 0;
+        $count_star4 = 0;
+        $count_star5 = 0;
+        foreach ($comments as $item){
+            if($item->marks == 1){
+                $count_star1 ++;
+            }elseif ($item->marks == 2){
+                $count_star2 ++;
+            }elseif ($item->marks == 3){
+                $count_star3 ++;
+            }elseif ($item->marks == 4){
+                $count_star4 ++;
+            }elseif ($item->marks == 5){
+                $count_star5 ++;
+            }
+
+        }
+        dd($count_star1);
 
 //        dd(Carbon::parse($product->end_sale)->diff(Carbon::now()));
 //        dd(2);
