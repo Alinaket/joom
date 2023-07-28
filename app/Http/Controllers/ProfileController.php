@@ -98,26 +98,10 @@ class ProfileController extends Controller
         $fonts = Font::where("id_font", $product_id)->get();
         $color = Color::where("color_id", $product_id)->get();
         $count_sale = $this->check_data($product);
-        $count_star1 = 0;
-        $count_star2 = 0;
-        $count_star3 = 0;
-        $count_star4 = 0;
-        $count_star5 = 0;
-        foreach ($comments as $item){
-            if($item->marks == 1){
-                $count_star1 ++;
-            }elseif ($item->marks == 2){
-                $count_star2 ++;
-            }elseif ($item->marks == 3){
-                $count_star3 ++;
-            }elseif ($item->marks == 4){
-                $count_star4 ++;
-            }elseif ($item->marks == 5){
-                $count_star5 ++;
-            }
 
-        }
-        dd($count_star1);
+
+
+//        dd($count_star1, $count_star2, $count_star3, $count_star4, $count_star5);
 
 //        dd(Carbon::parse($product->end_sale)->diff(Carbon::now()));
 //        dd(2);
@@ -130,7 +114,30 @@ class ProfileController extends Controller
             ->with("products_all", $products_all)
             ->with("comments", $comments)
             ->with("img_comments", $img_comments)
-            ->with("fonts", $fonts);
+            ->with("fonts", $fonts)
+//            ->with ($count_star1)
+            ;
+    }
+    public function count_star($comments){
+        $count_star1 = 0;
+        $count_star2 = 0;
+        $count_star3 = 0;
+        $count_star4 = 0;
+        $count_star5 = 0;
+        foreach ($comments as $item){
+
+            if($item->marks == 1){
+                $count_star1 ++;
+            }elseif ($item->marks == 2){
+                $count_star2 ++;
+            }elseif ($item->marks == 3){
+                $count_star3 ++;
+            }elseif ($item->marks == 4){
+                $count_star4 ++;
+            }elseif ($item->marks == 5){
+                $count_star5 ++;
+            }
+        }
     }
 
     private function check_data($product)

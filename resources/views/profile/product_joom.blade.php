@@ -60,7 +60,6 @@
                 <div class="title">
                     <h3>Відгуки<span>1500</span></h3>
                     <div class="marks">
-
                         <ul>
                             <li class="black">Всі</li>
                             <li><span class="margin"><i class="fa-solid fa-image"></i></span>198</li>
