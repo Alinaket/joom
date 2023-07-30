@@ -65,8 +65,11 @@ function open_description() {
         height.style.height = "50vh"
     }
 }
-
 function open_comment() {
     modal_input.classList.toggle("open")
 }
+function filter_star(key){
+    // console.log(key)
 
+
+}

@@ -64,28 +64,14 @@
                             <li class="black">Всі</li>
                             <li><span class="margin"><i class="fa-solid fa-image"></i></span>198</li>
                             <li><span class="margin"><i class="fa-regular fa-message"></i></span>298</li>
-                            <li><span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span> 1000+
-                            </li>
-
-                            <li><span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span> 141
-                            </li>
-                            <li><span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span> 66
-                            </li>
-                            <li><span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                            </li>
-                            <li>
-                                <span><i class="fa-solid fa-star"></i></span> 61
-                            </li>
+                            @foreach($count_star_arr as $key=>$item )
+                                <li onclick="filter_star({{$key}})">
+                                    @for( $i=0; $i<$key; $i++ )
+                                        <span class=""><i class="fa-solid fa-star"></i></span>
+                                    @endfor
+                                        {{$item}}
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
