@@ -65,7 +65,7 @@ img{
     /*padding-right: 30px;*/
     height: 70px;
 }
-.header .box_input{
+.header .box_input {
     background: #f5f6f9;
     display: grid;
     grid-template-columns: auto auto;
@@ -73,7 +73,7 @@ img{
     border-radius: 10px;
     height: 48px;
 }
-.header .modal_input input{
+.header  input{
     background: #f5f6f9;
     width: 595px;
     height: 48px;

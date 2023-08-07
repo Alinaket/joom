@@ -35,8 +35,8 @@
     </div>
     <div class="box_input">
         <div class="input">
-            <form action="">
-                <label for="">
+            <form>
+                <label>
                     <input type="text" placeholder="Пошук">
                 </label>
             </form>

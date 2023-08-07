@@ -9,29 +9,6 @@
             <a href="">{{$item->name}}</a>
         @endforeach
     </div>
-    {{--        <div class="header_top">--}}
-    {{--            <div class="container_header">--}}
-    {{--                <div class="img">--}}
-    {{--                    <img src="{{$product->img}}" alt="">--}}
-    {{--                    <div class="info_header">--}}
-    {{--                        <h4>{{$product->name}}Сонцезахисні окуляри Vintage стімпанк окуляри зварювання панк окуляри Косплей</h4>--}}
-    {{--                        <div class="em">--}}
-    {{--                            <em class="red"><span><i class="fa-solid fa-star"></i></span>{{$product->star}}</em>--}}
-    {{--                            <em>91% <span>рекомендують</span></em>--}}
-    {{--                            <em>30000 <span>покупок</span></em>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--                <div class="price">--}}
-    {{--                    <h2>від {{round($product->price-$product->price/$product->sale)}} грн <span class="sale_price"> {{$product->price}}грн</span></h2>--}}
-
-    {{--                    <div class="container_buyer">--}}
-    {{--                        <p class="black">В кошик</p>--}}
-    {{--                        <p>Придбати зараз</p>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
     <div class="all_container">
         <div class="box_1">
             <div class="all_img_product">
@@ -67,9 +44,9 @@
                             @foreach($count_star_arr as $key=>$item )
                                 <li onclick="filter_star({{$key}})">
                                     @for( $i=0; $i<$key; $i++ )
-                                        <span class=""><i class="fa-solid fa-star"></i></span>
+                                        <span onclick="filter_star(key)"><i class="fa-solid fa-star"></i></span>
                                     @endfor
-                                        {{$item}}
+                                    <em class="test">{{$item}}</em>
                                 </li>
                             @endforeach
                         </ul>
