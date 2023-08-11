@@ -152,7 +152,9 @@ input {outline:none;}
     border-bottom: 1px solid #e8e8ef;
     margin-right: 10px;
 }
-
+.box_1 .comments .card.disable{
+    display: none;
+}
 .box_1 .comments .card .img_profile {
     display: flex;
     justify-content: left;

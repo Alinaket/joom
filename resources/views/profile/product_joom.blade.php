@@ -38,15 +38,15 @@
                     <h3>Відгуки<span>1500</span></h3>
                     <div class="marks">
                         <ul>
-                            <li class="black">Всі</li>
+                            <li class="black" onclick="filter_star(none)">Всі</li>
                             <li><span class="margin"><i class="fa-solid fa-image"></i></span>198</li>
-                            <li><span class="margin"><i class="fa-regular fa-message"></i></span>298</li>
+                            <li><span class="margin" onclick="filter_star(none)"><i class="fa-regular fa-message"></i></span>298</li>
                             @foreach($count_star_arr as $key=>$item )
                                 <li onclick="filter_star({{$key}})">
                                     @for( $i=0; $i<$key; $i++ )
-                                        <span onclick="filter_star(key)"><i class="fa-solid fa-star"></i></span>
+                                        <span onclick="filter_star({{$key}}, this)"><i class="fa-solid fa-star"></i></span>
                                     @endfor
-                                    <em class="test">{{$item}}</em>
+                                    {{$item}}
                                 </li>
                             @endforeach
                         </ul>
@@ -55,7 +55,7 @@
                 <div class="comments">
                     <div class="cardList">
                         @foreach($comments as $item)
-                            <div class="card">
+                            <div class="card star_{{$item->marks}}">
                                 <div class="info_user">
                                     <div class="img_profile">
                                         <img

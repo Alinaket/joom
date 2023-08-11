@@ -8,7 +8,8 @@ const img_title = document.querySelector(".title_img img")
 const none = document.querySelector(" ul .none")
 const height = document.querySelector(".comments .cardList")
 const modal_input = document.querySelector(".reviews .modal_input")
-const em_test = document.querySelector("li .test")
+const disable = document.querySelectorAll(".disable")
+const black = document.querySelector("ul .black")
 
 function scroll_button(coordination) {
     scrolls_img(coordination)
@@ -69,19 +70,24 @@ function open_description() {
 function open_comment() {
     modal_input.classList.toggle("open")
 }
-function filter_star(key){
-    // key = 5;
-    // em_test. = key.
-    // if(key === 5){
-    //
-    // }
-    // for(let i=0; i===key; i++){
-    //     console.log(i)
-    //     if(i === 5){
-    //         em_test = key;
-    //     }else if(i === 4){
-    //         em_test = key;
-    //     }
-    // }
-    // console.log(em_test)
+function filter_star(key) {
+    const card = document.querySelectorAll(".comments .card")
+    if (key === none) {
+        card.forEach((item) => {
+            item.classList.remove("disable")
+        })
+
+    } else {
+        const active = document.querySelectorAll(".comments .star_" + key)
+        console.log(".comments .star_" + key)
+        card.forEach((item) => {
+            item.classList.add("disable")
+        })
+        active.forEach((item) => {
+            item.classList.remove("disable")
+        })
+    }
+    if(){
+
+    }
 }
