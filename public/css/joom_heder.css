@@ -493,3 +493,6 @@ h2{
     border-radius: 7px;
     text-align: center;
 }
+.disable{
+    display: none;
+}

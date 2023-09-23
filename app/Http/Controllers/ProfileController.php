@@ -91,7 +91,7 @@ class ProfileController extends Controller
         $gallery = Gallery::get();
         $product = Product::where("id", $product_id)->first();
         $this->find_category_list($product->category);
-        $products_all = Product::limit(14)->get();
+        $products_all = Product::limit(14*3)->get();
         $comments = UserComent::where("product_id", $product_id)->orderBy('marks', 'DESC')->get(); //ASC
         $img_comments = ImgComment::all();
         $fonts = Font::where("id_font", $product_id)->get();

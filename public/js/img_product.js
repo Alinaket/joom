@@ -3,6 +3,7 @@ let ticking = false;
 let lastKnownScrollPosition = 0;
 let is_scroll = true
 let old_item = null
+let number = 1
 const list_wrapper = document.querySelector(".all_img_product .list_wrapper")
 const list_wrapper_items = list_wrapper.querySelectorAll(".img")
 const img_title = document.querySelector(".title_img img")
@@ -11,9 +12,17 @@ const height = document.querySelector(".comments .cardList")
 const modal_input = document.querySelector(".reviews .modal_input")
 const disable = document.querySelectorAll(".disable")
 const new_item = document.querySelector(".marks ul .black")
+const product_all = document.querySelectorAll(" .other_product .card")
+product_all.forEach(item=>{
+    item.classList.add("disable")
+})
 
-
-
+function add_product_list (){
+    for(let i=0; i<5*number; i++){
+        product_all[i].classList.remove("disable");
+    }
+    number++
+}
 function scroll_button(coordination) {
     scrolls_img(coordination)
 }
@@ -75,27 +84,40 @@ function open_comment() {
 }
 function filter_star(key, element) {
     const card = document.querySelectorAll(".comments .card")
+    card.forEach((item) => {
+        item.classList.remove("disable")
+    })
     if (key === undefined) {
-        card.forEach((item) => {
-            item.classList.remove("disable")
-        })
+        // card.forEach((item) => {
+        //     item.classList.remove("disable")
+        // })
 
     } else {
         let found_class = "";
+        let no_img2 = true;
         if(key === "img"){
             found_class = "img_have";
+        }else if(key === "no_img"){
+            no_img2 = false;
+            found_class = "img_have";
         }else{
-            // const active = document.querySelectorAll(".comments .star_" + key);
-            found_class = ;
+            found_class = "star_" +key;
         }
-        const active = document.querySelectorAll(".comments "+ found_class);
-        card.forEach((item) => {
-            item.classList.add("disable")
-        })
-        active.forEach((item) => {
-            item.classList.remove("disable")
-        })
+        const active = document.querySelectorAll(".comments ."+ found_class);
+        if(no_img2 === true){
+            console.log(active);
+            card.forEach((item) => {
+                item.classList.add("disable")
+            })
+            active.forEach((item) => {
+                item.classList.remove("disable")
+            })
+        }else{
+            active.forEach((item)=>{
+                item.classList.add("disable")
+            })
 
+        }
     }
      if(old_item == null){
          new_item.classList.remove("black")
@@ -104,8 +126,6 @@ function filter_star(key, element) {
      }
      old_item = element
      element.classList.add("black")
-
-
 }
 
 

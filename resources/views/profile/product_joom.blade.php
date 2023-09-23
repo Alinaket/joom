@@ -40,7 +40,7 @@
                         <ul>
                             <li class="black" onclick="filter_star(undefined, this)">Всі</li>
                             <li onclick="filter_star('img', this)" ><span class="margin"><i class="fa-solid fa-image"></i></span>198</li>
-                            <li><span class="margin" onclick="filter_star(none_list)"><i
+                            <li onclick="filter_star('no_img', this)"><span class="margin" ><i
                                         class="fa-regular fa-message"></i></span>298
                             </li>
                             @foreach($count_star_arr as $key=>$item )
@@ -296,7 +296,7 @@
                 @endforeach
             </div>
             <div class="button_see">
-                <button>Показати ще</button>
+                <button onclick=" add_product_list()">Показати ще</button>
             </div>
         </div>
 
