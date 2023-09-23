@@ -291,6 +291,7 @@ input {outline:none;}
 .header_top .container_buyer .black {
     background: #2d2f43;
     margin:0 15px;
+    /*display: none;*/
 }
 
 .box_2 h1 {

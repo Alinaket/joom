@@ -2,14 +2,17 @@ let temp_scroll = 0
 let ticking = false;
 let lastKnownScrollPosition = 0;
 let is_scroll = true
+let old_item = null
 const list_wrapper = document.querySelector(".all_img_product .list_wrapper")
 const list_wrapper_items = list_wrapper.querySelectorAll(".img")
 const img_title = document.querySelector(".title_img img")
-const none = document.querySelector(" ul .none")
+const none_list = document.querySelector(" ul .none")
 const height = document.querySelector(".comments .cardList")
 const modal_input = document.querySelector(".reviews .modal_input")
 const disable = document.querySelectorAll(".disable")
-const black = document.querySelector("ul .black")
+const new_item = document.querySelector(".marks ul .black")
+
+
 
 function scroll_button(coordination) {
     scrolls_img(coordination)
@@ -59,35 +62,55 @@ function change_big_img(img) {
 
 function open_description() {
 
-    if (none.style.display === "block") {
-        none.style.display = "none"
+    if (none_list.style.display === "block") {
+        none_list.style.display = "none"
         height.style.height = "40vh"
     } else {
-        none.style.display = "block"
+        none_list.style.display = "block"
         height.style.height = "50vh"
     }
 }
 function open_comment() {
     modal_input.classList.toggle("open")
 }
-function filter_star(key) {
+function filter_star(key, element) {
     const card = document.querySelectorAll(".comments .card")
-    if (key === none) {
+    if (key === undefined) {
         card.forEach((item) => {
             item.classList.remove("disable")
         })
 
     } else {
-        const active = document.querySelectorAll(".comments .star_" + key)
-        console.log(".comments .star_" + key)
+        let found_class = "";
+        if(key === "img"){
+            found_class = "img_have";
+        }else{
+            // const active = document.querySelectorAll(".comments .star_" + key);
+            found_class = ;
+        }
+        const active = document.querySelectorAll(".comments "+ found_class);
         card.forEach((item) => {
             item.classList.add("disable")
         })
         active.forEach((item) => {
             item.classList.remove("disable")
         })
-    }
-    if(){
 
     }
+     if(old_item == null){
+         new_item.classList.remove("black")
+     }else{
+         old_item.classList.remove("black")
+     }
+     old_item = element
+     element.classList.add("black")
+
+
 }
+
+
+
+
+
+
+
