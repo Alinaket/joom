@@ -51,7 +51,7 @@
             </li>
             <li><a href="#"><span><i class="fa-regular fa-user"></i></span>Увійти</a></li>
             <li><a href="#"><span><i class="fa-solid fa-box-archive"></i></span>Мої замовлення</a></li>
-            <li><a href="#"><span><i class="fa-solid fa-cart-shopping"></i></span>Кошик</a></li>
+            <li><a href="{{route("profile.cart")}}"><span><i class="fa-solid fa-cart-shopping"></i></span>Кошик</a></li>
         </ul>
     </div>
 </div>

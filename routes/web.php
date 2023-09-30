@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -31,6 +32,10 @@ Route::get('/product_joom', [ProfileController::class, 'product_joom'])->name('p
 Route::get('/category', [ProfileController::class, 'category'])->name('profile.category');
 Route::get('/category_sub', [ProfileController::class, 'category_sub'])->name('profile.category_sub');
 Route::post('/add_comment', [CommentController::class, 'add_comment'])->name('profile.add_comment');
+Route::get('/cart', [ProfileController::class, 'cart'])->name('profile.cart');
+Route::post('/add_to_cart', [CartController::class, 'add_to_cart'])->name('cart.add_to_cart');
+
+
 
 
 

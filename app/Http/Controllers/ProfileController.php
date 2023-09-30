@@ -6,6 +6,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\Category;
 use App\Models\Color;
 use App\Models\Font;
+use App\Models\Cart;
 use App\Models\Gallery;
 use App\Models\ImgComment;
 use App\Models\Product;
@@ -269,6 +270,13 @@ class ProfileController extends Controller
         }
         return false;
     }
+    public function cart(){
+//        $cart = Cart::where("")->get();
+        $products = Product::get();
 
+        return view("profile.cart")
+            ->with("cart", $products)
+            ;
+    }
 }
 

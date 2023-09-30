@@ -158,7 +158,11 @@
 
                     </div>
                     <div class="container_buyer">
-                        <p class="black">В кошик</p>
+                        <form method="post" action="{{route("cart.add_to_cart")}}">
+                            @csrf
+                            <input type="hidden" name="product_id" value="">
+                            <button><p class="black">В кошик</p></button>
+                        </form>
                         <p>Придбати зараз</p>
                     </div>
                 </div>
