@@ -14,6 +14,7 @@ class CartController extends Controller
             $cart->product_id = $request->input("product_id");
             $cart->save();
         }
+        return back();
     }
 
 }

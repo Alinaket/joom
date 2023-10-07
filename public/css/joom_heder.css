@@ -1,7 +1,17 @@
 body{
-    max-width: 1285px;
-    margin: auto;
     font-family: "Segoe UI";
+}
+header{
+    margin: auto;
+    width: 1285px;
+    background: white;
+}
+.container_background{
+    margin: auto;
+    width: 1285px;
+}
+.nav_container{
+    background: white;
 }
 img{
     width: 300px;
@@ -13,8 +23,9 @@ img{
     font-size: 12px;
     /*padding: 8px 10px;*/
     align-items: center;
-    padding-bottom: 24px;
-
+    padding-bottom: 10px;
+    background: white;
+    /*width: 1285px;*/
 }
 .nav_container img{
     width: 12px;
@@ -59,6 +70,7 @@ img{
     margin: auto 0;
     text-align: center;
     align-items: center;
+    background: white;
 }
 .header .logo img{
     width: 122px;
@@ -123,6 +135,9 @@ img{
     border-radius: 10px;
     font-size: 10px;
     font-weight: 500;
+}
+.categories{
+    background: white;
 }
 .categories ul{
     display: flex;

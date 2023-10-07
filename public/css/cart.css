@@ -1,0 +1,321 @@
+body {
+    background: #f2f3f7;
+}
+header{
+    background: white;
+}
+.em {
+    font-size: 12px;
+    color: #8e90a7;
+}
+
+.cart {
+    margin-top: 16px;
+}
+
+h3 {
+    color: rgb(45, 47, 67);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 5px 0 20px;
+    font-family: "Segoe UI Semibold";
+}
+
+.container {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr auto;*/
+    display: flex;
+}
+
+.discount {
+    padding: 16px 24px;
+    background: white;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /*justify-content: left;*/
+    margin-bottom: 16px;
+    border-radius: 10px;
+
+}
+
+.discount .icon {
+    font-size: 24px;
+    color: #ff6262;
+    padding-right: 15px;
+    width: 24px;
+}
+
+.discount p {
+    font-size: 14px;
+}
+
+.discount .text {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.discount .dont_know {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.discount .dont_know .hr {
+    height: 4px;
+    width: 235px;
+    background: rgb(238, 238, 243);
+    border-radius: 5px;
+}
+
+.discount .dont_know .hr_active {
+    background: #ff7d7d;
+}
+
+.discount .arrow {
+    padding-left: 25px;
+    /*align-items: center;*/
+    margin: auto;
+    color: rgb(178, 179, 194);
+    font-size: 14px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 24px;
+    color: #f16262;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.list input {
+    font-size: 18px;
+
+}
+
+.list em {
+    color: rgb(45, 47, 67);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.list .delete {
+    font-size: 14px;
+}
+
+.list .delete .icon {
+    padding-right: 10px;
+}
+
+.cardList {
+    border-radius: 10px;
+    background: white;
+
+}
+
+.cardList .card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /*justify-content: space-between;*/
+    padding: 20px 24px 0;
+}
+
+.cardList .card .img {
+    padding: 0 15px;
+}
+
+.cardList .card img {
+    width: 95px;
+    height: 95px;
+    border-radius: 10px;
+}
+
+.cardList .card .info {
+    color: rgb(45, 47, 67);
+    font-size: 14px;
+    padding-bottom: 10px;
+    line-height: 16px;
+}
+
+.cardList .card .size, .delivery {
+    font-size: 14px;
+    color: rgb(142, 144, 167);
+    padding-bottom: 3px;
+}
+
+.cardList .card .quantity {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 2px;
+}
+
+.cardList .card span {
+    margin: auto 0;
+}
+
+.cardList .card .minus {
+    padding: 3px 8px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+    height: auto;
+    margin: auto 0;
+}
+
+.card .plus {
+    padding: 3px 7px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+    height: auto;
+    margin: auto 0;
+}
+
+.card .number {
+    padding: 0 10px;
+    color: #2d2f43;
+}
+
+.cardList .quantity .icon {
+    margin: auto 0;
+    padding-left: 15px;
+    color: rgb(199, 199, 204);
+}
+
+.cardList .card .price {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+    text-align: right;
+}
+
+.cardList .price h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(45, 47, 67);
+}
+
+.cardList .price .sale span {
+    color: #f16262;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.cardList .price .sale {
+    color: rgb(45, 47, 67);
+    font-size: 14px;
+    font-weight: 500;
+    width: 180px;
+}
+
+.cardList .price .sale em {
+    color: rgb(142, 144, 167);
+    font-size: 14px;
+}
+
+.buy {
+    padding-left: 16px;
+}
+
+.buy .container_buy{
+    padding: 0 24px;
+    width: 365px;
+    background: white;
+    border-radius: 10px;
+}
+.buy .container_buy h4{
+    color: rgb(45, 47, 67);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 24px 0;
+}
+.buy .container_buy .input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+}
+.buy .container_buy .input p{
+    padding: 11px 16px;
+    color: #f16262;
+    font-weight: 700;
+    font-size: 16px;
+}
+.buy .container_buy input{
+    height: 20px;
+    width:  184px;
+    padding: 11px 16px;
+    margin: 4px 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    color: rgba(0, 0, 0, 0.02);
+
+}
+.buy .container_buy button{
+    color: white;
+    background:rgb(255, 98, 98);
+    border: none;
+    border-radius: 10px;
+    padding: 13px 18px;
+    width:  100%;
+    font-size: 18px;
+}
+.buy .container_buy .conditions{
+    padding-top: 24px;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+}
+.buy .container_buy .conditions p{
+    padding:16px ;
+    color: rgb(178, 179, 194);
+}
+.buy .container_buy .conditions a{
+    color: rgb(255, 98, 98);
+    text-decoration: underline rgb(255, 98, 98);
+}
+.buy .payment{
+    padding: 48px 0;
+}
+.buy .payment h4{
+    color: rgb(142, 144, 167);
+    font-size: 15px;
+    font-weight: 500;
+}
+.buy .payment img{
+    width: 32px;
+    height:auto ;
+    padding: 10px 10px 10px 0;
+}
+.buy .payment p{
+    color: rgb(45, 47, 67);
+    font-size: 12px;
+    margin-top: 24px;
+}
+.buy .visa .payment_card{
+    display: flex;
+    padding: 18px 24px 18px 12px;
+    background: white;
+    border: 1px solid rgba(223, 223, 231, 0.6);
+    width: 154px;
+    border-radius: 10px;
+}
+.buy .visa .payment_card p{
+    font-size: 12px;
+    color: rgb(45, 47, 67);
+    font-weight: 500;
+    margin: auto 0;
+    padding-left: 10px;
+}
+.buy .visa h4{
+    color: rgb(142, 144, 167);
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 16px;
+}
+.buy .visa .payment_card img{
+    width: 40px;
+    height: auto;
+    margin-left: 8px;
+}

@@ -89,6 +89,7 @@ class ProfileController extends Controller
     public function product_joom(Request $request)
     {
         $product_id = $request->input("product_id");
+        $cart = Cart::where("product_id", $product_id)->first();
         $gallery = Gallery::get();
         $product = Product::where("id", $product_id)->first();
         $this->find_category_list($product->category);
@@ -104,6 +105,9 @@ class ProfileController extends Controller
                 $count_star_arr[$item->marks] = 0;
             }
             $count_star_arr[$item->marks]++;
+        }
+        if(isset($cart)){
+
         }
 
         return view("profile.product_joom")
@@ -271,8 +275,12 @@ class ProfileController extends Controller
         return false;
     }
     public function cart(){
-//        $cart = Cart::where("")->get();
-        $products = Product::get();
+        $cart = Cart::get();
+        $data = [];
+        foreach ($cart as $item){
+            $data[] = $item->product_id;
+        }
+        $products = Product::whereIn("id", $data)->get();
 
         return view("profile.cart")
             ->with("cart", $products)

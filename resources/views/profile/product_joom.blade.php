@@ -160,8 +160,9 @@
                     <div class="container_buyer">
                         <form method="post" action="{{route("cart.add_to_cart")}}">
                             @csrf
-                            <input type="hidden" name="product_id" value="">
-                            <button><p class="black">В кошик</p></button>
+                            <input type="hidden" name="product_id" value="{{$product->id}}">
+{{--                            @dd($product);--}}
+                            <button class="black"><p >В кошик</p></button>
                         </form>
                         <p>Придбати зараз</p>
                     </div>

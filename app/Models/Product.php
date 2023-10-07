@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static limit(int $int)
  * @method static orderBy(\Illuminate\Contracts\Database\Query\Expression $raw)
  * @method static where()
+ * @method static whereIn(string $string, array $data)
  */
 class Product extends Model
 {
